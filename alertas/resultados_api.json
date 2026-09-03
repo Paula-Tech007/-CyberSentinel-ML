@@ -1,0 +1,74 @@
+[
+    {
+        "timestamp": "2026-09-03T14:01:39.290468",
+        "id_evento": "EVT-001",
+        "status_http": 200,
+        "evento": {
+            "spkts": 10,
+            "dpkts": 2,
+            "sbytes": 1500,
+            "dbytes": 200,
+            "rate": 120.0,
+            "sttl": 254,
+            "dttl": 64,
+            "sload": 50000.0,
+            "dload": 3000.0
+        },
+        "resultado": {
+            "classificacao": "ATAQUE",
+            "probabilidade_ataque": 0.406258,
+            "probabilidade_percentual": 40.63,
+            "threshold": 0.099,
+            "nivel_risco": "MEDIO",
+            "modelo": "DecisionTreeClassifier"
+        }
+    },
+    {
+        "timestamp": "2026-09-03T14:01:39.316032",
+        "id_evento": "EVT-002",
+        "status_http": 200,
+        "evento": {
+            "spkts": 6,
+            "dpkts": 4,
+            "sbytes": 258,
+            "dbytes": 172,
+            "rate": 74.08749,
+            "sttl": 252,
+            "dttl": 254,
+            "sload": 14158.94238,
+            "dload": 8495.365234
+        },
+        "resultado": {
+            "classificacao": "ATAQUE",
+            "probabilidade_ataque": 0.933634,
+            "probabilidade_percentual": 93.36,
+            "threshold": 0.099,
+            "nivel_risco": "CRITICO",
+            "modelo": "DecisionTreeClassifier"
+        }
+    },
+    {
+        "timestamp": "2026-09-03T14:01:39.340477",
+        "id_evento": "EVT-003",
+        "status_http": 200,
+        "evento": {
+            "spkts": 2,
+            "dpkts": 2,
+            "sbytes": 130,
+            "dbytes": 162,
+            "rate": 15.0,
+            "sttl": 31,
+            "dttl": 29,
+            "sload": 1500.0,
+            "dload": 900.0
+        },
+        "resultado": {
+            "classificacao": "NORMAL",
+            "probabilidade_ataque": 0.0,
+            "probabilidade_percentual": 0.0,
+            "threshold": 0.099,
+            "nivel_risco": "NORMAL",
+            "modelo": "DecisionTreeClassifier"
+        }
+    }
+]

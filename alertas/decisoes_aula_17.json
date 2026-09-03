@@ -1,0 +1,24 @@
+[
+    {
+        "timestamp_decisao": "2026-09-03T14:43:15.063987",
+        "id_incidente": "INC-001",
+        "ip_origem": "192.168.1.50",
+        "risk_score": 70,
+        "context_score": 80,
+        "score_reputacao": 80,
+        "probabilidade_media": 67.0,
+        "alertas_criticos": 2,
+        "quantidade_alertas": 4,
+        "quantidade_destinos": 4,
+        "recorrencia": "ALTA",
+        "score_final": 75.05,
+        "decisao": "INCIDENTE_ALTO_RISCO",
+        "prioridade_final": "P2",
+        "severidade_final": "ALTO",
+        "status": "INVESTIGACAO_PRIORITARIA",
+        "acao_final": "ABRIR INVESTIGACAO PRIORITARIA, CORRELACIONAR LOGS, VALIDAR IOCS E ACOMPANHAR O ATIVO",
+        "sla_final_minutos": 30,
+        "execucao_real": false,
+        "modo": "MOTOR_REGRAS_SOC_SIMULADO"
+    }
+]

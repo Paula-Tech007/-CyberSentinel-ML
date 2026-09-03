@@ -1,0 +1,107 @@
+[
+    {
+        "timestamp": "2026-09-03T14:10:03.763614",
+        "id_evento": "SOC-EVT-001",
+        "classificacao": "ATAQUE",
+        "probabilidade_ataque": 0.406258,
+        "probabilidade_percentual": 40.63,
+        "threshold": 0.099,
+        "nivel_risco": "MEDIO",
+        "modelo": "DecisionTreeClassifier",
+        "evento": {
+            "spkts": 10,
+            "dpkts": 2,
+            "sbytes": 1500,
+            "dbytes": 200,
+            "rate": 120.0,
+            "sttl": 254,
+            "dttl": 64,
+            "sload": 50000.0,
+            "dload": 3000.0
+        }
+    },
+    {
+        "timestamp": "2026-09-03T14:10:05.787477",
+        "id_evento": "SOC-EVT-002",
+        "classificacao": "ATAQUE",
+        "probabilidade_ataque": 0.933634,
+        "probabilidade_percentual": 93.36,
+        "threshold": 0.099,
+        "nivel_risco": "CRITICO",
+        "modelo": "DecisionTreeClassifier",
+        "evento": {
+            "spkts": 6,
+            "dpkts": 4,
+            "sbytes": 258,
+            "dbytes": 172,
+            "rate": 74.08749,
+            "sttl": 252,
+            "dttl": 254,
+            "sload": 14158.94238,
+            "dload": 8495.365234
+        }
+    },
+    {
+        "timestamp": "2026-09-03T14:10:07.796159",
+        "id_evento": "SOC-EVT-003",
+        "classificacao": "NORMAL",
+        "probabilidade_ataque": 0.0,
+        "probabilidade_percentual": 0.0,
+        "threshold": 0.099,
+        "nivel_risco": "NORMAL",
+        "modelo": "DecisionTreeClassifier",
+        "evento": {
+            "spkts": 4,
+            "dpkts": 4,
+            "sbytes": 500,
+            "dbytes": 500,
+            "rate": 1.0,
+            "sttl": 31,
+            "dttl": 29,
+            "sload": 1000.0,
+            "dload": 1000.0
+        }
+    },
+    {
+        "timestamp": "2026-09-03T14:10:09.821663",
+        "id_evento": "SOC-EVT-004",
+        "classificacao": "ATAQUE",
+        "probabilidade_ataque": 0.406258,
+        "probabilidade_percentual": 40.63,
+        "threshold": 0.099,
+        "nivel_risco": "MEDIO",
+        "modelo": "DecisionTreeClassifier",
+        "evento": {
+            "spkts": 20,
+            "dpkts": 5,
+            "sbytes": 5000,
+            "dbytes": 300,
+            "rate": 300.0,
+            "sttl": 254,
+            "dttl": 64,
+            "sload": 90000.0,
+            "dload": 5000.0
+        }
+    },
+    {
+        "timestamp": "2026-09-03T14:10:11.828638",
+        "id_evento": "SOC-EVT-005",
+        "classificacao": "NORMAL",
+        "probabilidade_ataque": 0.0,
+        "probabilidade_percentual": 0.0,
+        "threshold": 0.099,
+        "nivel_risco": "NORMAL",
+        "modelo": "DecisionTreeClassifier",
+        "evento": {
+            "spkts": 3,
+            "dpkts": 3,
+            "sbytes": 200,
+            "dbytes": 250,
+            "rate": 2.0,
+            "sttl": 31,
+            "dttl": 29,
+            "sload": 800.0,
+            "dload": 900.0
+        }
+    }
+]

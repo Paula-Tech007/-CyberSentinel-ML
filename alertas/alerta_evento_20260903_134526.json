@@ -1,0 +1,22 @@
+{
+    "timestamp_alerta": "2026-09-03 13:45:26",
+    "tipo_alerta": "ML_NETWORK_ATTACK",
+    "origem": "EVENTO_EXTERNO_JSON",
+    "modelo": "DecisionTreeClassifier",
+    "threshold_modelo": 0.099,
+    "probabilidade_ataque": 0.4062575210589651,
+    "probabilidade_percentual": 40.63,
+    "classificacao": "ATAQUE",
+    "nivel_risco": "MEDIO",
+    "evento": {
+        "spkts": 10,
+        "dpkts": 2,
+        "sbytes": 1500,
+        "dbytes": 200,
+        "rate": 120.0,
+        "sttl": 254,
+        "dttl": 64,
+        "sload": 50000.0,
+        "dload": 3000.0
+    }
+}

@@ -1,0 +1,119 @@
+{
+    "aula": 19,
+    "tipo": "PIPELINE_INTEGRADO_SOC",
+    "timestamp_inicio": "2026-09-03T14:43:14.018476",
+    "timestamp_fim": "2026-09-03T14:43:15.251729",
+    "duracao_total_segundos": 1.23,
+    "pipeline_sucesso": true,
+    "etapas_previstas": 6,
+    "etapas_executadas": 6,
+    "etapas_sucesso": 6,
+    "etapas_erro": 0,
+    "resultados": [
+        {
+            "ordem": 1,
+            "arquivo": "aula_13.py",
+            "nome": "CORRELACAO DE EVENTOS",
+            "status": "SUCESSO",
+            "returncode": 0,
+            "duracao_segundos": 0.47,
+            "arquivo_saida": "alertas/incidentes_aula_13.json",
+            "arquivo_saida_existe": true
+        },
+        {
+            "ordem": 2,
+            "arquivo": "aula_14.py",
+            "nome": "PRIORIZACAO DE INCIDENTES",
+            "status": "SUCESSO",
+            "returncode": 0,
+            "duracao_segundos": 0.15,
+            "arquivo_saida": "alertas/incidentes_priorizados_aula_14.json",
+            "arquivo_saida_existe": true
+        },
+        {
+            "ordem": 3,
+            "arquivo": "aula_15.py",
+            "nome": "PLAYBOOK DE RESPOSTA SOC",
+            "status": "SUCESSO",
+            "returncode": 0,
+            "duracao_segundos": 0.14,
+            "arquivo_saida": "alertas/respostas_aula_15.json",
+            "arquivo_saida_existe": true
+        },
+        {
+            "ordem": 4,
+            "arquivo": "aula_16.py",
+            "nome": "ENRIQUECIMENTO DE INCIDENTES",
+            "status": "SUCESSO",
+            "returncode": 0,
+            "duracao_segundos": 0.15,
+            "arquivo_saida": "alertas/incidentes_enriquecidos_aula_16.json",
+            "arquivo_saida_existe": true
+        },
+        {
+            "ordem": 5,
+            "arquivo": "aula_17.py",
+            "nome": "MOTOR DE REGRAS SOC",
+            "status": "SUCESSO",
+            "returncode": 0,
+            "duracao_segundos": 0.16,
+            "arquivo_saida": "alertas/decisoes_aula_17.json",
+            "arquivo_saida_existe": true
+        },
+        {
+            "ordem": 6,
+            "arquivo": "aula_18.py",
+            "nome": "GESTAO DE CASOS SOC",
+            "status": "SUCESSO",
+            "returncode": 0,
+            "duracao_segundos": 0.16,
+            "arquivo_saida": "alertas/casos_aula_18.json",
+            "arquivo_saida_existe": true
+        }
+    ],
+    "quantidade_casos": 1,
+    "casos_finais": [
+        {
+            "id_caso": "CASE-001",
+            "id_incidente": "INC-001",
+            "timestamp_abertura": "2026-09-03T14:43:15.230301",
+            "status": "ABERTO",
+            "prioridade": "P2",
+            "severidade": "ALTO",
+            "score_final": 75.05,
+            "fila": "SOC_PRIORITARIO",
+            "responsavel": "SOC_L2",
+            "sla_minutos": 30,
+            "acao_recomendada": "ABRIR INVESTIGACAO PRIORITARIA, CORRELACIONAR LOGS, VALIDAR IOCS E ACOMPANHAR O ATIVO",
+            "decisao_soc": "INCIDENTE_ALTO_RISCO",
+            "status_decisao": "INVESTIGACAO_PRIORITARIA",
+            "evidencias": {
+                "ip_origem": "192.168.1.50",
+                "risk_score": 70,
+                "context_score": 80,
+                "score_reputacao": 80,
+                "probabilidade_media": 67.0,
+                "alertas_criticos": 2,
+                "quantidade_alertas": 4,
+                "quantidade_destinos": 4,
+                "recorrencia": "ALTA"
+            },
+            "historico": [
+                {
+                    "timestamp": "2026-09-03T14:43:15.230301",
+                    "acao": "CASO_CRIADO",
+                    "responsavel": "MOTOR_SOC",
+                    "descricao": "Caso criado automaticamente a partir da decisao final SOC"
+                },
+                {
+                    "timestamp": "2026-09-03T14:43:15.230301",
+                    "acao": "ATRIBUICAO_AUTOMATICA",
+                    "responsavel": "SOC_L2",
+                    "descricao": "Caso atribuido para SOC_L2"
+                }
+            ],
+            "execucao_real": false,
+            "modo": "CASE_MANAGEMENT_SIMULADO"
+        }
+    ]
+}

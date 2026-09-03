@@ -1,0 +1,21 @@
+[
+    {
+        "timestamp_resposta": "2026-09-03T14:43:14.754729",
+        "id_incidente": "INC-001",
+        "ip_origem": "192.168.1.50",
+        "risk_score": 70,
+        "prioridade": "P2",
+        "nivel_resposta": "PRIORITARIO",
+        "acao_principal": "ABRIR INVESTIGACAO PRIORITARIA NO SOC",
+        "sla_minutos": 30,
+        "recomendacoes": [
+            "Validar reputacao do IP de origem",
+            "Correlacionar eventos adicionais",
+            "Verificar outros destinos relacionados",
+            "Pesquisar atividade anterior do IP",
+            "Escalar para resposta a incidente se confirmado"
+        ],
+        "execucao_real": false,
+        "modo": "SIMULACAO_SOC"
+    }
+]

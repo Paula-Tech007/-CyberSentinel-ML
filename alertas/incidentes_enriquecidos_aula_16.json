@@ -1,0 +1,42 @@
+[
+    {
+        "id_incidente": "INC-001",
+        "timestamp_incidente": "2026-09-03T14:43:14.444293",
+        "tipo_incidente": "ML_CORRELATED_NETWORK_ATTACK",
+        "ip_origem": "192.168.1.50",
+        "quantidade_alertas": 4,
+        "quantidade_destinos": 4,
+        "destinos": [
+            "10.0.0.30",
+            "10.0.0.10",
+            "10.0.0.20",
+            "10.0.0.50"
+        ],
+        "probabilidade_media": 67.0,
+        "alertas_criticos": 2,
+        "severidade": "CRITICO",
+        "regra_correlacao": "MULTIPLOS_ALERTAS_MESMA_ORIGEM",
+        "eventos_relacionados": [
+            "CORR-001",
+            "CORR-002",
+            "CORR-003",
+            "CORR-005"
+        ],
+        "timestamp_priorizacao": "2026-09-03T14:43:14.606894",
+        "risk_score": 70,
+        "prioridade": "P2",
+        "severidade_priorizada": "ALTO",
+        "acao_recomendada": "INVESTIGACAO PRIORITARIA - correlacionar logs adicionais e validar atividade suspeita",
+        "timestamp_enriquecimento": "2026-09-03T14:43:14.906286",
+        "reputacao_ip": "SUSPEITO",
+        "score_reputacao": 80,
+        "ocorrencias_anteriores": 7,
+        "recorrencia": "ALTA",
+        "fonte_reputacao": "THREAT_INTEL_LOCAL",
+        "context_score": 80,
+        "nivel_contexto": "CRITICO",
+        "acao_playbook": "ABRIR INVESTIGACAO PRIORITARIA NO SOC",
+        "sla_playbook": 30,
+        "nivel_resposta": "PRIORITARIO"
+    }
+]

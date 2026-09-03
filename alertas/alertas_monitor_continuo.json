@@ -1,0 +1,68 @@
+[
+    {
+        "timestamp_alerta": "2026-09-03T14:10:03.763627",
+        "id_evento": "SOC-EVT-001",
+        "tipo_alerta": "ML_NETWORK_ATTACK",
+        "origem": "MONITOR_CONTINUO",
+        "modelo": "DecisionTreeClassifier",
+        "threshold_modelo": 0.099,
+        "probabilidade_ataque": 0.406258,
+        "probabilidade_percentual": 40.63,
+        "nivel_risco": "MEDIO",
+        "evento": {
+            "spkts": 10,
+            "dpkts": 2,
+            "sbytes": 1500,
+            "dbytes": 200,
+            "rate": 120.0,
+            "sttl": 254,
+            "dttl": 64,
+            "sload": 50000.0,
+            "dload": 3000.0
+        }
+    },
+    {
+        "timestamp_alerta": "2026-09-03T14:10:05.787490",
+        "id_evento": "SOC-EVT-002",
+        "tipo_alerta": "ML_NETWORK_ATTACK",
+        "origem": "MONITOR_CONTINUO",
+        "modelo": "DecisionTreeClassifier",
+        "threshold_modelo": 0.099,
+        "probabilidade_ataque": 0.933634,
+        "probabilidade_percentual": 93.36,
+        "nivel_risco": "CRITICO",
+        "evento": {
+            "spkts": 6,
+            "dpkts": 4,
+            "sbytes": 258,
+            "dbytes": 172,
+            "rate": 74.08749,
+            "sttl": 252,
+            "dttl": 254,
+            "sload": 14158.94238,
+            "dload": 8495.365234
+        }
+    },
+    {
+        "timestamp_alerta": "2026-09-03T14:10:09.821679",
+        "id_evento": "SOC-EVT-004",
+        "tipo_alerta": "ML_NETWORK_ATTACK",
+        "origem": "MONITOR_CONTINUO",
+        "modelo": "DecisionTreeClassifier",
+        "threshold_modelo": 0.099,
+        "probabilidade_ataque": 0.406258,
+        "probabilidade_percentual": 40.63,
+        "nivel_risco": "MEDIO",
+        "evento": {
+            "spkts": 20,
+            "dpkts": 5,
+            "sbytes": 5000,
+            "dbytes": 300,
+            "rate": 300.0,
+            "sttl": 254,
+            "dttl": 64,
+            "sload": 90000.0,
+            "dload": 5000.0
+        }
+    }
+]
