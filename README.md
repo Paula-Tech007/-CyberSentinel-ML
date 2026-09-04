@@ -1,32 +1,39 @@
-<div align="center">
+
 
 <img src="assets/cybersentinel-banner.png" width="100%" alt="CyberSentinel-ML">
 
 # 🛡️ CyberSentinel-ML
 
-### Machine Learning aplicado à Detecção, Correlação e Resposta a Incidentes de Segurança
+### Machine Learning + Threat Intelligence + SOC Engineering
 
 ![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Decision%20Tree-purple)
 ![FastAPI](https://img.shields.io/badge/API-FastAPI-009688?logo=fastapi&logoColor=white)
+![SQLite](https://img.shields.io/badge/Database-SQLite-003B57?logo=sqlite&logoColor=white)
 ![SOC](https://img.shields.io/badge/SOC-Automation-red)
 ![Dataset](https://img.shields.io/badge/Dataset-UNSW--NB15-orange)
-![Status](https://img.shields.io/badge/Status-Validated-success)
-![Security](https://img.shields.io/badge/Security-Defensive-blueviolet)
+![MITRE](https://img.shields.io/badge/MITRE-ATT%26CK-red)
+![Threat Intelligence](https://img.shields.io/badge/Threat%20Intel-AbuseIPDB-blue)
+![Tests](https://img.shields.io/badge/Tests-103%2F103-success)
+![Coverage](https://img.shields.io/badge/Coverage-100%25-success)
+![Status](https://img.shields.io/badge/Status-Completed-success)
+![Security](https://img.shields.io/badge/Mode-Simulation-blueviolet)
 
-**Cybersecurity • Machine Learning • Detection Engineering • SOC Automation**
+**Cybersecurity • Machine Learning • Threat Intelligence • Detection Engineering • SOC Automation**
 
-`Version 1.0` • `Project Health: 100%` • `32/32 Validations`
+`Project Health: 100%` • `103/103 Tests` • `End-to-End: 100%` • `Mode: SIMULATION`
 
-</div>
+
 
 ---
 
-## 🔎 Visão Geral
+# 🔎 Visão Geral
 
-**CyberSentinel-ML** é um laboratório de Machine Learning aplicado à Segurança Cibernética, desenvolvido para demonstrar um pipeline completo de detecção e tratamento de eventos de rede.
+**CyberSentinel-ML** é um laboratório defensivo de Machine Learning aplicado à Segurança Cibernética, criado para demonstrar uma arquitetura SOC completa de detecção, enriquecimento, correlação, análise, tomada de decisão, gerenciamento de casos e observabilidade.
 
-O projeto utiliza o dataset **UNSW-NB15** e um modelo `DecisionTreeClassifier` para analisar características do tráfego e classificar eventos como:
+O projeto utiliza o dataset **UNSW-NB15** e modelos baseados em `DecisionTreeClassifier`.
+
+O laboratório começou com classificação binária de tráfego:
 
 ```text
 NORMAL
@@ -34,99 +41,136 @@ NORMAL
 ATAQUE
 ```
 
-A classificação de Machine Learning é apenas o início do processo.
+e evoluiu para uma arquitetura End-to-End com:
 
-Quando uma atividade suspeita é detectada, o CyberSentinel-ML pode transformar a detecção em um alerta SOC, correlacionar múltiplos alertas, gerar um incidente, calcular risco, definir prioridade, selecionar um playbook, enriquecer o contexto, aplicar regras de decisão e finalmente criar um caso para investigação.
+- classificação binária;
+- classificação multiclasse;
+- REST API;
+- JSON / JSONL;
+- processamento em lote;
+- persistência SQLite;
+- Threat Intelligence;
+- AbuseIPDB;
+- IOC Enrichment;
+- Risk Score V2;
+- Historical IOC Correlation;
+- Campaign Detection;
+- Incident Timeline;
+- Incident Response Playbooks;
+- MITRE ATT&CK;
+- Incident Evidence Correlation;
+- SOC Decision Engine;
+- Case Management;
+- Case Lifecycle;
+- Human Approval Gate em simulação;
+- Metrics & Observability;
+- End-to-End Validation;
+- Final Test Suite;
+- Project Closure.
 
-> ⚠️ **Projeto educacional e de laboratório.**
+A arquitetura segue um princípio importante:
+
+```text
+DETECÇÃO
+   !=
+EVIDÊNCIA
+   !=
+DECISÃO
+   !=
+APROVAÇÃO
+   !=
+EXECUÇÃO
+```
+
+> ⚠️ **Projeto educacional, defensivo e de laboratório**
 >
-> As ações de resposta são simuladas. O projeto não executa automaticamente bloqueios ou alterações destrutivas em infraestrutura real.
+> Todas as ações de resposta permanecem em modo de **SIMULAÇÃO**.
+>
+> O projeto não executa bloqueios automáticos, não altera firewall e não realiza contenção real.
 
 ---
 
-## 🧠 Arquitetura
+# 🧠 Arquitetura End-to-End
 
 ```text
-┌─────────────────────┐
-│   EVENTO DE REDE    │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│      API REST       │
-│      FastAPI        │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│  MACHINE LEARNING   │
-│   Decision Tree     │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│      DETECÇÃO       │
-│  NORMAL / ATAQUE    │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│       ALERTA        │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│     CORRELAÇÃO      │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│      INCIDENTE      │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│     RISK SCORE      │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│     PRIORIZAÇÃO     │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│      PLAYBOOK       │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│   ENRIQUECIMENTO    │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│   MOTOR DE REGRAS   │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│    DECISÃO FINAL    │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│   CASE MANAGEMENT   │
-└─────────────────────┘
+                         CYBERSENTINEL-ML
+                                |
+                                v
+                         EVENTO DE REDE
+                                |
+                                v
+                           API / INGESTÃO
+                                |
+                                v
+                        MACHINE LEARNING
+                          |           |
+                          v           v
+                       BINÁRIO     MULTICLASSE
+                          |           |
+                          +-----+-----+
+                                |
+                                v
+                         CLASSIFICAÇÃO
+                                |
+                                v
+                       THREAT INTELLIGENCE
+                                |
+                                v
+                         IOC ENRICHMENT
+                                |
+                                v
+                          RISK SCORE V2
+                                |
+                                v
+                    HISTORICAL CORRELATION
+                                |
+                                v
+                       CAMPAIGN DETECTION
+                                |
+                                v
+                        INCIDENT TIMELINE
+                                |
+                                v
+                       INCIDENT RESPONSE
+                                |
+                                v
+                      MITRE ATT&CK CONTEXT
+                                |
+                                v
+                       INCIDENT EVIDENCE
+                                |
+                                v
+                      SOC DECISION ENGINE
+                                |
+                                v
+                         CASE MANAGEMENT
+                                |
+                                v
+                          CASE LIFECYCLE
+                                |
+                                v
+                        HUMAN APPROVAL GATE
+                                |
+                                v
+                     METRICS & OBSERVABILITY
+                                |
+                                v
+                     END-TO-END VALIDATION
+                                |
+                                v
+                        FINAL TEST SUITE
+                                |
+                                v
+                         PROJECT CLOSURE
 ```
 
 ---
 
 # 🤖 Machine Learning Engine
 
-O núcleo de detecção utiliza um modelo supervisionado treinado sobre dados do **UNSW-NB15**.
+O núcleo de detecção utiliza modelos supervisionados treinados sobre dados do **UNSW-NB15**.
 
-### Configuração atual
+## Configuração do modelo binário
 
 | Parâmetro | Valor |
 |---|---|
@@ -140,7 +184,7 @@ O núcleo de detecção utiliza um modelo supervisionado treinado sobre dados do
 
 ---
 
-## 📊 Performance do modelo
+## 📊 Performance do modelo binário
 
 | Métrica | Resultado |
 |---|---:|
@@ -151,19 +195,41 @@ O núcleo de detecção utiliza um modelo supervisionado treinado sobre dados do
 | ❌ Falsos Negativos | **540** |
 | ⚠️ Falsos Positivos | **12.755** |
 
-O threshold utilizado pelo laboratório foi configurado em:
+Threshold:
 
 ```text
 0.099
 ```
 
-A configuração prioriza sensibilidade de detecção, buscando reduzir a ocorrência de ataques classificados incorretamente como tráfego normal.
+A configuração prioriza sensibilidade de detecção, buscando reduzir ataques classificados incorretamente como tráfego normal.
+
+---
+
+# 🧬 Classificação Multiclasse
+
+Além da classificação binária, o projeto possui classificação multiclasse de categorias de ataque.
+
+Artefatos versionados:
+
+```text
+modelos/configuracao_multiclasse_aula_22.joblib
+modelos/configuracao_multiclasse_otimizada_aula_22.joblib
+modelos/unsw_attack_multiclass_otimizado.joblib
+```
+
+O modelo multiclasse original:
+
+```text
+modelos/unsw_attack_multiclass.joblib
+```
+
+possui aproximadamente **157 MB** e não é versionado no GitHub devido ao limite padrão de tamanho por arquivo.
+
+O modelo otimizado permanece disponível no repositório.
 
 ---
 
 # 🔬 Features utilizadas
-
-O modelo utiliza nove características do tráfego:
 
 ```text
 01. spkts
@@ -177,21 +243,21 @@ O modelo utiliza nove características do tráfego:
 09. dload
 ```
 
-Esses atributos são enviados ao modelo para produção da classificação e da probabilidade associada ao evento.
+Esses atributos são utilizados na classificação dos eventos de rede.
 
 ---
 
 # ⚡ API de Detecção
 
-O modelo pode ser consumido através de uma API REST desenvolvida com **FastAPI**.
+O modelo pode ser consumido através de uma API REST construída com **FastAPI**.
 
-### Endpoint
+## Endpoint
 
 ```http
 POST /detectar
 ```
 
-### Exemplo de evento
+## Exemplo de evento
 
 ```json
 {
@@ -207,7 +273,7 @@ POST /detectar
 }
 ```
 
-### Exemplo de resposta
+## Exemplo de resposta
 
 ```json
 {
@@ -224,334 +290,647 @@ POST /detectar
 
 # 🚨 Detection & Alert Engine
 
-Depois da análise do modelo, eventos classificados como ataque podem gerar alertas SOC.
+Eventos classificados como suspeitos podem gerar alertas SOC.
 
 ```text
 NETWORK EVENT
-      │
-      ▼
+      |
+      v
  ML DETECTION
-      │
-      ▼
- ATTACK?
-   │     │
-  NÃO   SIM
-   │     │
-   ▼     ▼
-NORMAL  ALERT
+      |
+      v
+   ATTACK?
+    |    |
+   NÃO  SIM
+    |    |
+    v    v
+ NORMAL ALERT
 ```
 
-Os alertas preservam informações importantes para as etapas posteriores, incluindo:
+Os alertas preservam:
 
-- identificação do evento;
+- ID do evento;
 - timestamp;
+- classificação;
 - probabilidade;
 - nível de risco;
 - modelo utilizado;
 - threshold;
-- características originais do evento.
+- características originais.
 
 ---
 
-# 📡 Monitoramento contínuo
+# 📡 JSON / JSONL & Batch Processing
 
-O projeto implementa processamento contínuo de eventos e monitoramento de logs no formato **JSONL**.
+O CyberSentinel-ML suporta:
+
+- JSON;
+- JSONL;
+- ingestão de eventos;
+- processamento em lote;
+- validação estrutural;
+- eventos rejeitados;
+- integração com o pipeline de ML.
 
 ```text
-eventos/eventos_rede.jsonl
-           │
-           ▼
-       MONITOR
-           │
-           ▼
-       API REST
-           │
-           ▼
-      MODELO ML
-           │
-           ▼
-       DETECÇÃO
-           │
-           ▼
-      ALERTA SOC
+JSON / JSONL
+      |
+      v
+  VALIDATION
+      |
+      v
+API / BATCH PIPELINE
+      |
+      v
+ MACHINE LEARNING
+      |
+      v
+    SOC EVENT
 ```
-
-O monitor também pode identificar **novas linhas adicionadas ao arquivo**, permitindo simular ingestão contínua de eventos.
 
 ---
 
-# 🔗 Correlation Engine
+# 💾 Persistência SQLite
 
-Alertas isolados nem sempre representam todo o contexto de uma ameaça.
-
-Por isso, o CyberSentinel-ML possui uma camada de correlação.
-
-Exemplo:
+O banco principal é:
 
 ```text
-              192.168.1.50
-                    │
-       ┌────────────┼────────────┐
-       │            │            │
-       ▼            ▼            ▼
-   10.0.0.10    10.0.0.20    10.0.0.30
-                                    │
-                                    ▼
-                                10.0.0.50
+dados/cybersentinel.db
 ```
 
-Múltiplos alertas relacionados à mesma origem podem ser agrupados.
+Durante a Aula 48 foram inventariadas **18 tabelas antes da criação do registro de Project Closure**.
 
-Exemplo de regra implementada:
+Entre as principais estruturas estão:
 
 ```text
-MULTIPLOS_ALERTAS_MESMA_ORIGEM
+alertas
+alertas_operacionais
+baselines_operacionais
+campanhas_ioc
+correlacao_ioc_eventos
+eventos
+incident_evidence
+incident_response_playbooks
+incident_timelines
+metricas
+mitre_attack_mapping
+soc_case_transitions
+soc_end_to_end_runs
+soc_final_validation_runs
+soc_human_approvals
+soc_incident_cases
+soc_incident_decisions
+soc_observability_snapshots
+```
+
+Na etapa final também é criada:
+
+```text
+soc_project_closure
+```
+
+---
+
+# 📉 Operational Baseline
+
+O projeto implementa uma camada de baseline para acompanhar comportamento operacional e apoiar observabilidade.
+
+Essa etapa permite comparar o estado atual com referências anteriores e identificar mudanças relevantes no pipeline.
+
+---
+
+# 🌐 Threat Intelligence
+
+O CyberSentinel-ML integra Threat Intelligence externo utilizando **AbuseIPDB**.
+
+O enriquecimento pode considerar:
+
+```text
+IOC
+Abuse Confidence Score
+Reports
+Reputação
+Histórico
+Recorrência
+Contexto
+```
+
+Credenciais são carregadas através de variável de ambiente.
+
+> Nunca publique chaves de API no repositório.
+
+---
+
+# 🔎 IOC Enrichment
+
+Fluxo simplificado:
+
+```text
+IOC
+ |
+ v
+THREAT INTELLIGENCE
+ |
+ v
+REPUTATION
+ |
+ v
+CONTEXT ENRICHMENT
+ |
+ v
+RISK ENGINE
+```
+
+O objetivo é adicionar contexto externo sem substituir os sinais produzidos pelas demais camadas.
+
+---
+
+# 🎯 Risk Score V2
+
+O Risk Score V2 combina informações como:
+
+```text
+Machine Learning
+Threat Intelligence
+Reputação
+Recorrência
+Contexto
+Correlação histórica
+Categoria
+```
+
+Invariante:
+
+```text
+0 <= Risk Score <= 100
+```
+
+---
+
+# 🔗 Historical IOC Correlation
+
+O pipeline mantém histórico de eventos relacionados a IOCs.
+
+```text
+IOC
+ |
+ +--> EVENTO 1
+ |
+ +--> EVENTO 2
+ |
+ +--> EVENTO 3
+ |
+ v
+HISTORICAL CORRELATION
+```
+
+A correlação acrescenta contexto sobre recorrência e evolução do risco.
+
+---
+
+# 🕸️ Campaign Detection
+
+Eventos recorrentes de um mesmo IOC podem ser agrupados para identificar possível atividade de campanha.
+
+Cenário validado:
+
+```text
+IOC: 8.8.8.8
+
+Eventos: 3
+Categorias: 3
+Campaign Score: 85/100
+Nível: CRÍTICO
+Status: CAMPANHA_DETECTADA
+```
+
+---
+
+# 🕒 Incident Timeline
+
+O projeto cria timelines para representar evolução temporal.
+
+```text
+PRIMEIRO EVENTO
+      |
+      v
+EVENTOS INTERMEDIÁRIOS
+      |
+      v
+EVENTO DE MAIOR RISCO
+      |
+      v
+INCIDENT TIMELINE
+```
+
+São avaliados:
+
+- primeiro score;
+- score final;
+- score máximo;
+- variação;
+- tendência;
+- evolução temporal.
+
+---
+
+# 📕 Incident Response Playbooks
+
+O CyberSentinel-ML possui playbooks defensivos simulados.
+
+Exemplos:
+
+```text
+✓ Abrir incidente
+✓ Validar IOC
+✓ Investigar timeline
+✓ Correlacionar campanha
+✓ Preservar evidências
+✓ Escalar para analista
+✓ Preparar contenção
+✓ Notificar responsável
+```
+
+Importante:
+
+```text
+PREPARAR CONTENÇÃO
+       !=
+EXECUTAR CONTENÇÃO
+```
+
+Modo:
+
+```text
+SIMULAÇÃO
+```
+
+---
+
+# 🧬 MITRE ATT&CK
+
+O pipeline contextualiza eventos utilizando **MITRE ATT&CK**.
+
+O mapeamento é conservador.
+
+Exemplos:
+
+```text
+DoS
+
+Contexto: IMPACTO
+Tática: Impact
+Confiança: CONTEXTUAL
+```
+
+```text
+Shellcode
+
+Contexto: EXECUCAO_POTENCIAL
+Tática: Execution
+Confiança: CONTEXTUAL
+```
+
+O projeto não inventa Technique IDs quando a evidência é insuficiente.
+
+---
+
+# 🧾 Incident Evidence Correlation
+
+Diversas fontes são consolidadas em uma camada de evidência:
+
+```text
+Historical Correlation
+Campaign Detection
+Incident Timeline
+Incident Response
+MITRE Context
+        |
+        v
+INCIDENT EVIDENCE
+```
+
+O **Evidence Score** representa força de contexto correlacionado.
+
+Ele não representa diretamente probabilidade de ataque.
+
+## Cenários validados
+
+### IOC de menor risco
+
+```text
+IOC: 1.1.1.1
+Evidence Score: 18
+Nível: BAIXO
+```
+
+### IOC crítico
+
+```text
+IOC: 8.8.8.8
+Evidence Score: 92
+Nível: CRÍTICO
+```
+
+---
+
+# 🔗 Lineage e Rastreabilidade
+
+Uma das regras mais importantes do projeto:
+
+```text
+Decision.evidence_id
+        ==
+Evidence.evidence_id
+```
+
+Cadeia:
+
+```text
+Decision
+   |
+   +-- evidence_id
+           |
+           v
+       Evidence
+           |
+           +-- evidence_score
+           +-- mitre_contexto
+           +-- mitre_tatica
+           +-- mitre_confianca
+```
+
+Isso permite rastrear uma decisão até a evidência correspondente.
+
+---
+
+# ⚙️ SOC Decision Engine
+
+O Decision Engine combina:
+
+- Evidence Score;
+- Risk Score;
+- Campaign Detection;
+- Timeline;
+- MITRE Context;
+- prioridade;
+- SLA;
+- necessidade de analista;
+- escalonamento;
+- preparação de contenção.
+
+## Cenário crítico
+
+```text
+IOC: 8.8.8.8
+
+Evidence Score: 92
+Decision Score: 92.15
+Prioridade SOC: CRÍTICO
+Classificação: INCIDENTE_PRIORITARIO
+Ação: ESCALAR_E_PREPARAR_CONTENCAO
+SLA: IMEDIATO
+```
+
+## Cenário de menor risco
+
+```text
+IOC: 1.1.1.1
+
+Evidence Score: 18
+Decision Score: 25.50
+Prioridade SOC: BAIXO
+Classificação: MONITORAMENTO
+Ação: MONITORAR_E_REGISTRAR
+```
+
+Regra:
+
+```text
+AUTO BLOCK: NÃO
+```
+
+---
+
+# 📂 SOC Case Management
+
+Decisões SOC podem originar casos para acompanhamento.
+
+Cada caso pode incluir:
+
+```text
+Case ID
+IOC
+Evidence
+Decision
+Risk Score
+Priority
+Status
+Phase
+Owner
+SLA
+History
+```
+
+---
+
+# 🔄 Case Lifecycle
+
+As mudanças de estado são persistidas.
+
+```text
+CASE
+ |
+ v
+TRIAGEM
+ |
+ v
+ESCALONAMENTO
+ |
+ v
+APROVAÇÃO
+ |
+ v
+ACOMPANHAMENTO
+```
+
+Tabela:
+
+```text
+soc_case_transitions
+```
+
+---
+
+# 👤 Human Approval Gate
+
+O projeto registra uma camada de aprovação simulada antes de ações sensíveis.
+
+Princípio:
+
+```text
+DECISÃO
+   |
+   v
+APROVAÇÃO
+   |
+   v
+AÇÃO AUTORIZADA
+
+AÇÃO AUTORIZADA
+   !=
+EXECUÇÃO REAL
+```
+
+No laboratório:
+
+```text
+Aprovações registradas ..... 1
+Execuções reais ............ 0
+Bloqueios automáticos ...... 0
+Modo ....................... SIMULAÇÃO
+```
+
+---
+
+# 📈 Metrics & Observability
+
+A camada de observabilidade acompanha:
+
+```text
+IOC Correlation
+Campaign Detection
+Timeline
+Incident Response
+MITRE
+Evidence
+Decision Engine
+Case Management
+Lifecycle
+Human Approval
+Security Invariants
 ```
 
 Resultado:
 
 ```text
-4 ALERTAS
-    ↓
-1 INCIDENTE SOC
+Observability Health ....... 100%
+IOCs ativos ................ 2
+```
+
+Arquivos:
+
+```text
+metricas/soc_metrics_aula_45.json
+metricas/soc_metrics_aula_45.prom
 ```
 
 ---
 
-# 🎯 Risk Scoring
+# 🔁 End-to-End Validation
 
-Depois da correlação, o incidente passa pelo mecanismo de cálculo de risco.
-
-O pipeline considera diferentes informações, como:
+A validação End-to-End verifica integridade entre as camadas.
 
 ```text
-Probabilidade ML
-Quantidade de alertas
-Destinos diferentes
-Alertas críticos
-Reputação
-Recorrência
-Contexto
+Artefatos ML ............... 4/4
+Componentes ................ 11/11
+IOCs ativos ................ 2
+Lineages completos ......... 2/2
+
+Decision -> Evidence ....... SIM
+MITRE consistente .......... SIM
+
+End-to-End Health .......... 100%
 ```
 
-Exemplo produzido pelo laboratório:
+Arquivo:
 
 ```text
-Risk Score: 70/100
-Prioridade: P2
-Severidade: ALTO
-```
-
----
-
-# 🚦 Priorização SOC
-
-Os incidentes podem ser classificados operacionalmente em:
-
-| Prioridade | Tratamento |
-|---|---|
-| 🔴 P1 | Emergencial |
-| 🟠 P2 | Prioritário |
-| 🟡 P3 | Análise |
-| 🟢 P4 | Monitoramento |
-
-Isso permite organizar uma fila de investigação semelhante ao fluxo utilizado em operações de SOC.
-
----
-
-# 📕 Playbook Engine
-
-Depois da priorização, o sistema seleciona uma resposta adequada ao nível do incidente.
-
-Exemplo:
-
-```text
-INCIDENTE: INC-001
-
-PRIORIDADE:
-P2
-
-AÇÃO:
-ABRIR INVESTIGAÇÃO PRIORITÁRIA NO SOC
-
-SLA:
-30 minutos
-```
-
-Entre as recomendações geradas pelo laboratório estão:
-
-```text
-✓ Validar reputação do IP de origem
-✓ Correlacionar eventos adicionais
-✓ Verificar outros destinos relacionados
-✓ Pesquisar atividade anterior do IP
-✓ Escalar para resposta a incidente quando necessário
+pipeline/end_to_end_aula_46.json
 ```
 
 ---
 
-# 🌐 Context Enrichment
+# 🧪 Final Test Suite
 
-Antes da decisão final, o incidente recebe contexto adicional.
-
-O enriquecimento pode considerar:
+A bateria final valida:
 
 ```text
-Reputação do IP
-Score de reputação
-Ocorrências anteriores
-Recorrência
-Context Score
-Threat Intelligence local
+✓ Ambiente
+✓ Machine Learning
+✓ SQLite
+✓ Schemas
+✓ IOCs
+✓ Scores
+✓ Decision -> Evidence
+✓ MITRE
+✓ Case Management
+✓ Lifecycle
+✓ Human Approval
+✓ Observability
+✓ End-to-End
+✓ Arquivos
+✓ JSON
+✓ Segurança
 ```
 
-Exemplo:
+Resultado:
 
 ```text
-Reputação ............. SUSPEITO
-Reputation Score ...... 80/100
-Ocorrências ........... 7
-Recorrência ........... ALTA
-Context Score ......... 80/100
-Context Level ......... CRITICO
+Testes executados .......... 103
+Testes aprovados ........... 103
+Falhas ..................... 0
+Cobertura .................. 100.00%
+```
+
+Arquivo:
+
+```text
+testes/final_validation_aula_47.json
 ```
 
 ---
 
-# ⚙️ SOC Rules Engine
+# 🏁 Project Closure
 
-O Motor de Regras combina os diferentes sinais produzidos pelo pipeline.
-
-Exemplo de decisão:
+Resultados consolidados:
 
 ```text
-Risk Score ............ 70/100
-Context Score ......... 80/100
-Reputation Score ...... 80/100
-ML Probability ........ 67.00%
+Artefatos ML ............... 4/4
+IOCs ativos ................ 2
 
-              ↓
+Observability Health ....... 100%
+End-to-End Health .......... 100%
+Lineages completos ......... 2
 
-Final Score ........... 75.05/100
+Decision -> Evidence ....... SIM
+MITRE consistente .......... SIM
 
-              ↓
+Testes finais .............. 103/103
+Falhas ..................... 0
+Cobertura .................. 100%
 
-Decision:
-INCIDENTE_ALTO_RISCO
+Execuções reais ............ 0
+Bloqueios automáticos ...... 0
+Modo operacional ........... SIMULAÇÃO
+```
 
-Priority:
-P2
+Validações da Aula 48:
 
-Severity:
-ALTO
+```text
+28/28
+```
+
+Project Health:
+
+```text
+100.00%
+```
 
 Status:
-INVESTIGACAO_PRIORITARIA
-```
-
----
-
-# 📂 Case Management
-
-A decisão final pode resultar na criação automática de um caso SOC.
-
-Exemplo:
-
-```json
-{
-  "id_caso": "CASE-001",
-  "id_incidente": "INC-001",
-  "status": "ABERTO",
-  "prioridade": "P2",
-  "severidade": "ALTO",
-  "score_final": 75.05,
-  "fila": "SOC_PRIORITARIO",
-  "responsavel": "SOC_L2",
-  "sla_minutos": 30
-}
-```
-
-O caso mantém informações como:
 
 ```text
-✓ Evidências
-✓ Prioridade
-✓ Severidade
-✓ Risk Score
-✓ Responsável
-✓ SLA
-✓ Decisão SOC
-✓ Ação recomendada
-✓ Histórico de ações
-```
-
----
-
-# 🔄 Pipeline integrado
-
-O projeto também possui uma camada de orquestração capaz de executar sequencialmente as principais etapas SOC.
-
-```text
-ETAPA 1
-Correlação
-    ↓
-ETAPA 2
-Priorização
-    ↓
-ETAPA 3
-Playbook
-    ↓
-ETAPA 4
-Enriquecimento
-    ↓
-ETAPA 5
-Motor de Regras
-    ↓
-ETAPA 6
-Case Management
-```
-
-Resultado da validação atual:
-
-```text
-Etapas previstas .......... 6
-Etapas executadas ......... 6
-Etapas com sucesso ........ 6
-Etapas com erro ........... 0
-
-STATUS:
-PIPELINE CONCLUÍDO
-```
-
----
-
-# 🧪 Validação automática
-
-O CyberSentinel-ML possui uma rotina de validação final do laboratório.
-
-Ela verifica:
-
-```text
-✓ Diretórios
-✓ Modelo de Machine Learning
-✓ Configuração do modelo
-✓ Scripts
-✓ Artefatos SOC
-✓ Pipeline integrado
-✓ Case Management
-```
-
-### Resultado atual
-
-```text
-Validações realizadas ..... 32
-Validações OK ............. 32
-Validações com erro ....... 0
-
-Saúde do projeto .......... 100.00%
-
-STATUS FINAL:
-PROJETO VALIDADO
+PROJETO CONCLUÍDO
 ```
 
 ---
@@ -566,10 +945,14 @@ PROJETO VALIDADO
 | ⚡ FastAPI | API REST |
 | 🚀 Uvicorn | Servidor ASGI |
 | 🐼 Pandas | Processamento de dados |
-| 💾 Joblib | Persistência do modelo |
+| 💾 Joblib | Persistência dos modelos |
+| 🗄️ SQLite | Persistência operacional |
 | 📄 JSON | Eventos e artefatos |
-| 📜 JSONL | Streaming de eventos |
-| 📊 CSV | Resultados e alertas |
+| 📜 JSONL | Ingestão contínua |
+| 📊 CSV | Resultados |
+| 🌐 AbuseIPDB | Threat Intelligence |
+| 🧬 MITRE ATT&CK | Contextualização |
+| 📈 Prometheus-style Metrics | Observabilidade |
 
 ---
 
@@ -579,63 +962,79 @@ PROJETO VALIDADO
 CyberSentinel-ML/
 │
 ├── assets/
-│   └── cybersentinel-banner.png
-│
 ├── alertas/
-│   ├── incidentes_aula_13.json
-│   ├── incidentes_priorizados_aula_14.json
-│   ├── respostas_aula_15.json
-│   ├── incidentes_enriquecidos_aula_16.json
-│   ├── decisoes_aula_17.json
-│   ├── casos_aula_18.json
-│   ├── relatorio_pipeline_aula_19.json
-│   └── relatorio_final_aula_20.json
-│
+├── aprovacoes/
+├── campanhas/
+├── casos/
+├── correlacao/
+├── dados/
+├── decisoes/
+├── docs/
 ├── eventos/
-│   └── eventos_rede.jsonl
-│
+├── evidencias/
+├── iocs/
+├── metricas/
+├── mitre/
 ├── modelos/
-│   ├── configuracao_modelo.joblib
-│   └── unsw_decision_tree.joblib
+├── pipeline/
+├── playbooks/
+├── risk_scores/
+├── testes/
+├── threat_intel/
+├── timelines/
 │
 ├── aula_03.py
 ├── aula_04.py
-├── aula_05.py
-├── aula_06.py
-├── aula_07.py
-├── aula_08.py
-├── aula_09.py
-├── aula_10.py
-├── aula_11.py
-├── aula_12.py
-├── aula_13.py
-├── aula_14.py
-├── aula_15.py
-├── aula_16.py
-├── aula_17.py
-├── aula_18.py
-├── aula_19.py
-├── aula_20.py
+├── ...
+├── aula_21.py
+├── ...
+├── aula_46.py
+├── aula_47.py
+├── aula_48.py
 │
 ├── evento.json
 ├── .gitignore
-└── README.md
+├── README.md
+└── README_FINAL.md
+```
+
+---
+
+# 📚 Documentação Técnica
+
+Documentação final:
+
+```text
+README_FINAL.md
+docs/ARQUITETURA_FINAL.md
+docs/RESUMO_EXECUTIVO.md
+docs/inventario_tecnico.json
+alertas/relatorio_aula_48.json
+```
+
+Validações:
+
+```text
+metricas/soc_metrics_aula_45.json
+metricas/soc_metrics_aula_45.prom
+pipeline/end_to_end_aula_46.json
+testes/final_validation_aula_47.json
 ```
 
 ---
 
 # 🚀 Como executar
 
-## 1. Clone o projeto
+## 1. Clone o repositório
 
 ```bash
-git clone https://github.com/Paula-Tech007/-CyberSentinel-ML.git
+git clone https://github.com/Paula-Tech007/CyberSentinel-ML.git
 ```
 
-Entre no diretório:
+Entre na pasta:
 
 ```bash
-cd -CyberSentinel-ML
+cd CyberSentinel-ML
 ```
 
 ---
@@ -654,21 +1053,39 @@ python -m venv .venv
 
 ---
 
-## 3. Instale as dependências
+## 3. Instale as dependências principais
 
 ```bash
-pip install pandas scikit-learn fastapi uvicorn joblib requests
+pip install pandas scikit-learn fastapi uvicorn joblib requests python-dotenv
 ```
 
 ---
 
-## 4. Inicie a API
+## 4. Configure variáveis de ambiente
+
+Crie localmente:
+
+```text
+.env
+```
+
+Exemplo:
+
+```text
+ABUSEIPDB_API_KEY=SUA_CHAVE_LOCAL
+```
+
+> Nunca publique o valor real da chave.
+
+---
+
+## 5. Execute a API
 
 ```bash
 uvicorn aula_08:app --reload
 ```
 
-Documentação Swagger local:
+Swagger:
 
 ```text
 http://127.0.0.1:8000/docs
@@ -682,41 +1099,17 @@ http://127.0.0.1:8000/health
 
 ---
 
-## 5. Execute o pipeline SOC
-
-Mantenha a API ativa e, em outro terminal:
-
-```bash
-python aula_19.py
-```
-
----
-
-## 6. Execute a validação
-
-```bash
-python aula_20.py
-```
-
-Resultado esperado para a versão atual:
-
-```text
-Saúde do projeto: 100.00%
-Status: PROJETO VALIDADO
-```
-
----
-
 # 🛡️ Segurança do repositório
 
-O projeto possui regras de `.gitignore` para evitar o versionamento acidental de arquivos locais e informações sensíveis.
+O `.gitignore` protege arquivos locais e sensíveis.
 
-Exemplos:
+Exemplo:
 
 ```gitignore
 .venv/
 venv/
 __pycache__/
+*.pyc
 
 .env
 .env.*
@@ -733,109 +1126,203 @@ __pycache__/
 
 .vscode/
 .idea/
+
+modelos/unsw_attack_multiclass.joblib
 ```
 
-Antes da publicação, o projeto também pode ser verificado em busca de:
-
-```text
-password
-passwd
-token
-api_key
-secret
-authorization
-bearer
-client_secret
-access_key
-```
+O modelo de aproximadamente 157 MB permanece local e fora do GitHub.
 
 ---
 
 # 🔐 Security by Design
 
-O CyberSentinel-ML foi estruturado como laboratório defensivo.
-
 ```text
 NO REAL BLOCKING
+
 NO DESTRUCTIVE RESPONSE
+
 NO PRODUCTION CREDENTIALS
-NO AUTOMATIC INFRASTRUCTURE CHANGES
+
+NO AUTOMATIC FIREWALL CHANGES
+
+NO REAL CONTAINMENT
 
 RESPONSE MODE:
+
 SIMULATION
 ```
 
-O objetivo é estudar **detecção, análise, correlação, priorização e automação defensiva**.
+Pipeline conceitual:
+
+```text
+DETECT
+   |
+   v
+ENRICH
+   |
+   v
+CORRELATE
+   |
+   v
+EVIDENCE
+   |
+   v
+DECIDE
+   |
+   v
+APPROVE
+   |
+   v
+OBSERVE
+```
 
 ---
 
 # 🗺️ Roadmap
 
-### CyberSentinel-ML v1.x
+## ✅ Capacidades concluídas
 
 - [x] Machine Learning
 - [x] Detecção binária
+- [x] Detecção multiclasse
+- [x] Comparação entre modelos ML
 - [x] Threshold customizado
-- [x] Persistência do modelo
+- [x] Persistência dos modelos
 - [x] API REST
-- [x] Monitoramento contínuo
-- [x] JSONL Event Monitoring
+- [x] JSON / JSONL
+- [x] Batch Processing
 - [x] Alert Engine
-- [x] Correlation Engine
-- [x] Incident Generation
-- [x] Risk Scoring
-- [x] Incident Prioritization
-- [x] Playbook Engine
-- [x] Context Enrichment
-- [x] SOC Rules Engine
+- [x] Persistência SQLite
+- [x] Operational Metrics
+- [x] Operational Baseline
+- [x] Threat Intelligence externo
+- [x] AbuseIPDB
+- [x] Machine Learning + Threat Intelligence
+- [x] IOC Enrichment
+- [x] Risk Score V2
+- [x] Historical IOC Correlation
+- [x] Campaign Detection
+- [x] Incident Timeline
+- [x] Incident Response
+- [x] MITRE ATT&CK Mapping
+- [x] Incident Evidence Correlation
+- [x] SOC Decision Engine
 - [x] Case Management
-- [x] Pipeline Orchestration
-- [x] Project Validation
+- [x] Case Lifecycle
+- [x] Human Approval Gate em simulação
+- [x] Metrics & Observability
+- [x] End-to-End Validation
+- [x] Testes automatizados
+- [x] Final Test Suite — 103/103
+- [x] Documentação final
+- [x] Project Closure
 
-### Próximas evoluções
+## 🔭 Possíveis evoluções futuras
 
-- [ ] Threat Intelligence externo
-- [ ] Elasticsearch
-- [ ] Grafana
-- [ ] Dashboard SOC
-- [ ] Docker
-- [ ] Testes automatizados
-- [ ] Persistência em banco de dados
-- [ ] Observabilidade
+- [ ] Elasticsearch Integration
+- [ ] Grafana Dashboards
+- [ ] Dashboard SOC Web
+- [ ] Dockerização completa
 - [ ] SIEM Integration
 - [ ] SOAR Integration
-- [ ] MITRE ATT&CK Mapping
-- [ ] Evolução do Correlation Engine
-- [ ] Comparação entre modelos ML
-- [ ] Detecção multiclasse
-- [ ] CyberSentinel-ML v2.0
+- [ ] CI/CD com GitHub Actions
 
 ---
 
 # 📈 System Status
 
 ```text
-╔════════════════════════════════════════════╗
-║           CYBERSENTINEL-ML v1.0            ║
-╠════════════════════════════════════════════╣
-║                                            ║
-║  ML ENGINE ................. READY         ║
-║  REST API .................. READY         ║
-║  DETECTION ENGINE .......... READY         ║
-║  ALERT ENGINE .............. READY         ║
-║  CORRELATION ENGINE ........ READY         ║
-║  RISK ENGINE ............... READY         ║
-║  PLAYBOOK ENGINE ........... READY         ║
-║  CONTEXT ENGINE ............ READY         ║
-║  RULES ENGINE .............. READY         ║
-║  CASE MANAGEMENT ........... READY         ║
-║                                            ║
-║  PROJECT HEALTH ............ 100%          ║
-║                                            ║
-║  SYSTEM STATUS ............. VALIDATED     ║
-║                                            ║
-╚════════════════════════════════════════════╝
+╔══════════════════════════════════════════════════╗
+║              CYBERSENTINEL-ML                    ║
+╠══════════════════════════════════════════════════╣
+║                                                  ║
+║ ML BINARY ...................... READY            ║
+║ ML MULTICLASS .................. READY            ║
+║ REST API ....................... READY            ║
+║ JSON / JSONL ................... READY            ║
+║ SQLITE ......................... READY            ║
+║ THREAT INTELLIGENCE ............ READY            ║
+║ IOC ENRICHMENT ................. READY            ║
+║ RISK SCORE ..................... READY            ║
+║ CORRELATION .................... READY            ║
+║ CAMPAIGN DETECTION ............. READY            ║
+║ INCIDENT TIMELINE .............. READY            ║
+║ INCIDENT RESPONSE .............. READY            ║
+║ MITRE ATT&CK ................... READY            ║
+║ EVIDENCE CORRELATION ........... READY            ║
+║ SOC DECISION ENGINE ............ READY            ║
+║ CASE MANAGEMENT ................ READY            ║
+║ CASE LIFECYCLE ................. READY            ║
+║ HUMAN APPROVAL ................. SIMULATED        ║
+║ OBSERVABILITY .................. READY            ║
+║ END-TO-END ..................... 100%             ║
+║ FINAL TEST SUITE ............... 103/103          ║
+║                                                  ║
+║ PROJECT HEALTH ................. 100%             ║
+║                                                  ║
+║ SYSTEM STATUS .................. COMPLETED        ║
+║                                                  ║
+╚══════════════════════════════════════════════════╝
 ```
+
+---
+
+# 🏆 Resultados Finais
+
+| Indicador | Resultado |
+|---|---:|
+| Artefatos ML finais | **4/4** |
+| IOCs ativos | **2** |
+| Tabelas inventariadas antes do closure | **18** |
+| Observability Health | **100%** |
+| End-to-End Health | **100%** |
+| Lineages completos | **2/2** |
+| Decision → Evidence | **SIM** |
+| MITRE consistente | **SIM** |
+| Testes finais | **103/103** |
+| Falhas | **0** |
+| Cobertura | **100%** |
+| Validações de fechamento | **28/28** |
+| Project Health | **100%** |
+| Execuções reais | **0** |
+| Bloqueios automáticos | **0** |
+| Modo operacional | **SIMULAÇÃO** |
+
+---
+
+# 🎯 Objetivo Educacional
+
+O CyberSentinel-ML foi desenvolvido como laboratório de estudo e portfólio para demonstrar conhecimentos em:
+
+- Machine Learning aplicado à Cybersecurity;
+- Detection Engineering;
+- SOC Engineering;
+- Threat Intelligence;
+- Incident Response;
+- Security Automation;
+- IOC Analysis;
+- Risk Scoring;
+- MITRE ATT&CK;
+- Evidence Correlation;
+- Case Management;
+- Observability;
+- End-to-End Validation;
+- Security by Design.
+
+---
+
+# ⚠️ Uso Responsável
+
+Este projeto possui finalidade **educacional, defensiva e de pesquisa**.
+
+Não deve ser utilizado para:
+
+- atacar sistemas de terceiros;
+- explorar ambientes sem autorização;
+- comprometer serviços;
+- realizar contenção ou bloqueios fora de ambiente autorizado.
+
+Todas as etapas de resposta foram desenvolvidas e validadas em ambiente controlado.
 
 ---
 
@@ -849,14 +1336,17 @@ Projeto desenvolvido como laboratório prático de aplicação de **Machine Lear
 
 <br>
 
-### 🛡️ CyberSentinel-ML
+## 🛡️ CyberSentinel-ML
 
-**From Network Events to SOC Decisions**
+### From Network Events to SOC Decisions
 
-`DETECT` → `CORRELATE` → `PRIORITIZE` → `RESPOND`
+`DETECT` → `ENRICH` → `CORRELATE` → `EVIDENCE` → `DECIDE` → `APPROVE` → `OBSERVE`
 
 <br>
 
-**SYSTEM ONLINE**
+### ✅ PROJECT COMPLETED
 
-</div>
+**103/103 Tests • 100% Coverage • 100% End-to-End Health**
+
+**Defensive Security • Machine Learning • SOC Engineering**
+
