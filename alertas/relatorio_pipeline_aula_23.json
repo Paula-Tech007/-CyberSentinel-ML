@@ -1,0 +1,81 @@
+{
+    "projeto": "CyberSentinel-ML",
+    "aula": 23,
+    "versao": "Pipeline Binario + Multiclasse",
+    "timestamp": "2026-09-04T09:12:25.925610",
+    "arquitetura": "EVENTO -> MODELO BINARIO -> NORMAL/ATAQUE -> CLASSIFICADOR MULTICLASSE -> CATEGORIA -> ALERTA SOC",
+    "modelo_binario": {
+        "arquivo": "modelos\\unsw_decision_tree.joblib",
+        "algoritmo": "DecisionTreeClassifier",
+        "threshold": 0.099
+    },
+    "modelo_multiclasse": {
+        "arquivo": "modelos\\unsw_attack_multiclass_otimizado.joblib",
+        "algoritmo": "DecisionTreeClassifier",
+        "quantidade_categorias": 9,
+        "categorias": [
+            "Analysis",
+            "Backdoor",
+            "DoS",
+            "Exploits",
+            "Fuzzers",
+            "Generic",
+            "Reconnaissance",
+            "Shellcode",
+            "Worms"
+        ]
+    },
+    "features": [
+        "spkts",
+        "dpkts",
+        "sbytes",
+        "dbytes",
+        "rate",
+        "sttl",
+        "dttl",
+        "sload",
+        "dload"
+    ],
+    "estatisticas": {
+        "eventos_processados": 3,
+        "eventos_normais": 0,
+        "eventos_ataque": 3,
+        "eventos_erro": 0,
+        "alertas_gerados": 3
+    },
+    "resultados": [
+        {
+            "id_evento": "EVT-23-001",
+            "timestamp": "2026-09-04T09:12:25.917995",
+            "classificacao_binaria": "ATAQUE",
+            "probabilidade_ataque": 0.099815,
+            "categoria_ataque": "DoS",
+            "confianca_categoria": 0.821908,
+            "severidade": "ALTO",
+            "alerta_soc": true,
+            "alerta_id": "ALT-23-001"
+        },
+        {
+            "id_evento": "EVT-23-002",
+            "timestamp": "2026-09-04T09:12:25.920039",
+            "classificacao_binaria": "ATAQUE",
+            "probabilidade_ataque": 0.406258,
+            "categoria_ataque": "Shellcode",
+            "confianca_categoria": 0.889117,
+            "severidade": "CRITICO",
+            "alerta_soc": true,
+            "alerta_id": "ALT-23-002"
+        },
+        {
+            "id_evento": "EVT-23-003",
+            "timestamp": "2026-09-04T09:12:25.922185",
+            "classificacao_binaria": "ATAQUE",
+            "probabilidade_ataque": 0.933634,
+            "categoria_ataque": "Exploits",
+            "confianca_categoria": 1.0,
+            "severidade": "CRITICO",
+            "alerta_soc": true,
+            "alerta_id": "ALT-23-003"
+        }
+    ]
+}

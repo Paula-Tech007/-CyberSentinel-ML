@@ -1,0 +1,11 @@
+{
+    "projeto": "CyberSentinel-ML",
+    "aula": 36,
+    "titulo": "Deteccao de Campanhas por IOC",
+    "registros_historicos": 4,
+    "iocs_unicos": 2,
+    "analises_realizadas": 2,
+    "campanhas_detectadas": 1,
+    "alertas_soc": 1,
+    "timestamp": "2026-09-04T15:39:02.148926+00:00"
+}

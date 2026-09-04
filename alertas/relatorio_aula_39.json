@@ -1,0 +1,33 @@
+{
+    "projeto": "CyberSentinel-ML",
+    "aula": 39,
+    "versao": "2.0",
+    "timestamp": "2026-09-04T16:02:58.123188+00:00",
+    "eventos_analisados": 4,
+    "mappings_mitre": 4,
+    "mappings_contextuais": 3,
+    "evidencia_insuficiente": 1,
+    "techniques_confirmadas": 0,
+    "categorias_distintas": 3,
+    "taticas_candidatas": 2,
+    "iocs_distintos": 2,
+    "iocs": [
+        "1.1.1.1",
+        "8.8.8.8"
+    ],
+    "categorias": [
+        "DoS",
+        "Exploits",
+        "Shellcode"
+    ],
+    "taticas": [
+        "Execution",
+        "Impact"
+    ],
+    "schema_mitre_migrado": true,
+    "colunas_adicionadas": [
+        "ip_origem",
+        "categoria_ml",
+        "observacao"
+    ]
+}

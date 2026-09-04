@@ -1,0 +1,24 @@
+{
+    "projeto": "CyberSentinel-ML",
+    "aula": 44,
+    "versao": "1.0",
+    "timestamp": "2026-09-04T17:19:27.475685+00:00",
+    "casos_soc": 2,
+    "casos_aprovacao": 1,
+    "aprovacoes_processadas": 1,
+    "aprovadas": 1,
+    "rejeitadas": 0,
+    "adiadas": 0,
+    "mais_evidencias": 0,
+    "acoes_autorizadas": 1,
+    "execucoes_reais": 0,
+    "bloqueios_automaticos": 0,
+    "alertas": 1,
+    "modo_operacional": "SIMULACAO",
+    "validacoes": {
+        "total": 18,
+        "ok": 18,
+        "saude": 100.0
+    },
+    "status": "AULA 44 CONCLUIDA"
+}

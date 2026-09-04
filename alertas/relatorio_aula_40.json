@@ -1,0 +1,29 @@
+{
+    "aula": 40,
+    "nome": "INCIDENT EVIDENCE CORRELATION",
+    "versao": "V2 - Campaign Score + Timeline Variation",
+    "timestamp": "2026-09-04T16:10:34.629148+00:00",
+    "iocs_analisados": 2,
+    "evidencias_geradas": 2,
+    "campanhas_integradas": 1,
+    "timelines_integradas": 2,
+    "playbooks_integrados": 2,
+    "contextos_mitre_integrados": 2,
+    "distribuicao_evidence_score": {
+        "BAIXO": 1,
+        "MEDIO": 0,
+        "ALTO": 0,
+        "CRITICO": 1
+    },
+    "confianca_evidencias": {
+        "BAIXA": 0,
+        "MEDIA": 0,
+        "ALTA": 2
+    },
+    "validacoes": {
+        "total": 25,
+        "ok": 25,
+        "saude": 100.0
+    },
+    "status": "AULA 40 CONCLUIDA"
+}

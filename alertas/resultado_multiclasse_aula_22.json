@@ -1,0 +1,112 @@
+{
+    "projeto": "CyberSentinel-ML",
+    "aula": 22,
+    "objetivo": "Classificacao multiclasse de categorias de ataque.",
+    "dataset": "UNSW-NB15",
+    "modelo": "RandomForestClassifier",
+    "quantidade_features": 9,
+    "features": [
+        "spkts",
+        "dpkts",
+        "sbytes",
+        "dbytes",
+        "rate",
+        "sttl",
+        "dttl",
+        "sload",
+        "dload"
+    ],
+    "quantidade_categorias": 9,
+    "categorias": [
+        "Analysis",
+        "Backdoor",
+        "DoS",
+        "Exploits",
+        "Fuzzers",
+        "Generic",
+        "Reconnaissance",
+        "Shellcode",
+        "Worms"
+    ],
+    "eventos_treinamento": 45332,
+    "eventos_teste": 119341,
+    "metricas": {
+        "accuracy_percentual": 72.9548,
+        "precision_macro_percentual": 54.0968,
+        "recall_macro_percentual": 52.8595,
+        "f1_macro_percentual": 52.0461,
+        "precision_weighted_percentual": 80.2522,
+        "recall_weighted_percentual": 72.9548,
+        "f1_weighted_percentual": 75.4704
+    },
+    "tempo_treinamento_segundos": 1.3771,
+    "tempo_predicao_segundos": 0.6505,
+    "resultado_por_categoria": [
+        {
+            "categoria": "Analysis",
+            "precision_percentual": 6.6045,
+            "recall_percentual": 16.65,
+            "f1_percentual": 9.4575,
+            "suporte": 2000
+        },
+        {
+            "categoria": "Backdoor",
+            "precision_percentual": 6.9115,
+            "recall_percentual": 22.8522,
+            "f1_percentual": 10.6131,
+            "suporte": 1746
+        },
+        {
+            "categoria": "DoS",
+            "precision_percentual": 33.3795,
+            "recall_percentual": 51.1008,
+            "f1_percentual": 40.3815,
+            "suporte": 12264
+        },
+        {
+            "categoria": "Exploits",
+            "precision_percentual": 81.9954,
+            "recall_percentual": 54.6612,
+            "f1_percentual": 65.5946,
+            "suporte": 33393
+        },
+        {
+            "categoria": "Fuzzers",
+            "precision_percentual": 83.4706,
+            "recall_percentual": 78.5911,
+            "f1_percentual": 80.9574,
+            "suporte": 18184
+        },
+        {
+            "categoria": "Generic",
+            "precision_percentual": 97.991,
+            "recall_percentual": 98.53,
+            "f1_percentual": 98.2598,
+            "suporte": 40000
+        },
+        {
+            "categoria": "Reconnaissance",
+            "precision_percentual": 88.6034,
+            "recall_percentual": 73.2914,
+            "f1_percentual": 80.2233,
+            "suporte": 10491
+        },
+        {
+            "categoria": "Shellcode",
+            "precision_percentual": 26.1505,
+            "recall_percentual": 31.5975,
+            "f1_percentual": 28.6171,
+            "suporte": 1133
+        },
+        {
+            "categoria": "Worms",
+            "precision_percentual": 61.7647,
+            "recall_percentual": 48.4615,
+            "f1_percentual": 54.3103,
+            "suporte": 130
+        }
+    ],
+    "modelo_salvo": "modelos\\unsw_attack_multiclass.joblib",
+    "configuracao_salva": "modelos\\configuracao_multiclasse_aula_22.joblib",
+    "integracao_automatica_pipeline": false
+}

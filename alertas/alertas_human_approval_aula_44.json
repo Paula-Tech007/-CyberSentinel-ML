@@ -1,0 +1,14 @@
+[
+    {
+        "alerta_id": "APP-ALT-44-20260904171927470521-6353D2F1",
+        "timestamp": "2026-09-04T17:19:27.470615+00:00",
+        "approval_id": "APR-44-20260904171927456792-58F91CCD",
+        "case_id": "CASE-42-20260904170021574785-BDE96CDA",
+        "ip_origem": "8.8.8.8",
+        "decisao": "APROVADO",
+        "acao_autorizada": true,
+        "execucao_real": false,
+        "bloqueio_automatico": false,
+        "modo": "SIMULACAO"
+    }
+]

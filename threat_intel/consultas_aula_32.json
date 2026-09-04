@@ -1,0 +1,42 @@
+{
+    "projeto": "CyberSentinel-ML",
+    "aula": 32,
+    "fonte": "AbuseIPDB",
+    "timestamp": "2026-09-04T13:56:35.304506+00:00",
+    "consultas": [
+        {
+            "timestamp": "2026-09-04T13:56:35.047598+00:00",
+            "fonte": "AbuseIPDB",
+            "status": "SUCESSO",
+            "ip": "8.8.8.8",
+            "abuse_confidence_score": 0,
+            "nivel_risco": "SEM_RISCO",
+            "total_reports": 198,
+            "last_reported_at": "2026-09-04T12:22:22+00:00",
+            "country_code": "US",
+            "country_name": null,
+            "isp": "Google LLC",
+            "domain": "google.com",
+            "usage_type": "Content Delivery Network",
+            "is_whitelisted": true,
+            "tempo_consulta_ms": 293.2061
+        },
+        {
+            "timestamp": "2026-09-04T13:56:35.299846+00:00",
+            "fonte": "AbuseIPDB",
+            "status": "SUCESSO",
+            "ip": "1.1.1.1",
+            "abuse_confidence_score": 0,
+            "nivel_risco": "SEM_RISCO",
+            "total_reports": 2,
+            "last_reported_at": "2026-09-04T07:43:58+00:00",
+            "country_code": "AU",
+            "country_name": null,
+            "isp": "APNIC and Cloudflare DNS Resolver project",
+            "domain": "cloudflare.com",
+            "usage_type": "Content Delivery Network",
+            "is_whitelisted": true,
+            "tempo_consulta_ms": 249.6502
+        }
+    ]
+}

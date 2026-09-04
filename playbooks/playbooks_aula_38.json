@@ -1,0 +1,107 @@
+{
+    "projeto": "CyberSentinel-ML",
+    "aula": 38,
+    "versao": "CORRIGIDA",
+    "playbooks": [
+        {
+            "playbook_id": "PB-38-20260904154759-C7464C18",
+            "timeline_id": "TL-37-0001",
+            "ioc": "8.8.8.8",
+            "status_incidente": "INCIDENTE_CRITICO",
+            "score_risco": 88.01,
+            "campanha_detectada": true,
+            "score_campanha": 90,
+            "nivel_campanha": "CRITICO",
+            "status_campanha": "CAMPANHA_DETECTADA",
+            "prioridade": "CRITICO",
+            "acao_recomendada": "ESCALACAO_E_CONTENCAO",
+            "quantidade_acoes": 7,
+            "modo": "SIMULACAO",
+            "status_playbook": "GERADO",
+            "acoes": [
+                {
+                    "ordem": 1,
+                    "acao": "ABRIR_INCIDENTE_CRITICO",
+                    "descricao": "Criar incidente SOC de prioridade critica.",
+                    "execucao": "SIMULADA"
+                },
+                {
+                    "ordem": 2,
+                    "acao": "ESCALAR_IMEDIATAMENTE",
+                    "descricao": "Escalar o incidente para analise especializada.",
+                    "execucao": "SIMULADA"
+                },
+                {
+                    "ordem": 3,
+                    "acao": "INVESTIGAR_TIMELINE",
+                    "descricao": "Revisar toda a timeline e evolucao do risco.",
+                    "execucao": "SIMULADA"
+                },
+                {
+                    "ordem": 4,
+                    "acao": "VALIDAR_CONTENCAO",
+                    "descricao": "Preparar possiveis medidas de contencao para aprovacao humana.",
+                    "execucao": "SIMULADA"
+                },
+                {
+                    "ordem": 5,
+                    "acao": "PRESERVAR_EVIDENCIAS",
+                    "descricao": "Registrar contexto necessario para investigacao posterior.",
+                    "execucao": "SIMULADA"
+                },
+                {
+                    "ordem": 6,
+                    "acao": "CORRELACIONAR_CAMPANHA",
+                    "descricao": "Associar o incidente a campanha previamente detectada.",
+                    "execucao": "SIMULADA"
+                },
+                {
+                    "ordem": 7,
+                    "acao": "NOTIFICAR_RESPONSAVEL",
+                    "descricao": "Gerar recomendacao de notificacao ao responsavel pelo incidente.",
+                    "execucao": "SIMULADA"
+                }
+            ],
+            "timestamp": "2026-09-04T15:47:59.732409+00:00"
+        },
+        {
+            "playbook_id": "PB-38-20260904154759-4BE730C0",
+            "timeline_id": "TL-37-0002",
+            "ioc": "1.1.1.1",
+            "status_incidente": "EVENTO_ISOLADO",
+            "score_risco": 46.52,
+            "campanha_detectada": false,
+            "score_campanha": 30,
+            "nivel_campanha": "BAIXO",
+            "status_campanha": "PADRAO_INSUFICIENTE",
+            "prioridade": "MEDIO",
+            "acao_recomendada": "TRIAGEM_SOC",
+            "quantidade_acoes": 3,
+            "modo": "SIMULACAO",
+            "status_playbook": "GERADO",
+            "acoes": [
+                {
+                    "ordem": 1,
+                    "acao": "ABRIR_INCIDENTE",
+                    "descricao": "Criar incidente para triagem do SOC.",
+                    "execucao": "SIMULADA"
+                },
+                {
+                    "ordem": 2,
+                    "acao": "VALIDAR_IOC",
+                    "descricao": "Revisar IOC, contexto historico e Threat Intelligence.",
+                    "execucao": "SIMULADA"
+                },
+                {
+                    "ordem": 3,
+                    "acao": "MONITORAR",
+                    "descricao": "Aumentar monitoramento do IOC relacionado.",
+                    "execucao": "SIMULADA"
+                }
+            ],
+            "timestamp": "2026-09-04T15:47:59.750196+00:00"
+        }
+    ],
+    "quantidade": 2,
+    "timestamp": "2026-09-04T15:47:59.757473+00:00"
+}

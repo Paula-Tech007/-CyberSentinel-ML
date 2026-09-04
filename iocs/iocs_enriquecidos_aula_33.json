@@ -1,0 +1,68 @@
+{
+    "projeto": "CyberSentinel-ML",
+    "aula": 33,
+    "timestamp": "2026-09-04T15:08:30.030776+00:00",
+    "iocs": [
+        {
+            "ioc_id": "IOC-20260904150829217070",
+            "tipo_ioc": "IP",
+            "valor": "8.8.8.8",
+            "classificacao": "IP_PUBLICO",
+            "publico": true,
+            "valido": true,
+            "extraido_em": "2026-09-04T15:08:29.217121+00:00",
+            "fonte_enriquecimento": "AbuseIPDB",
+            "status_enriquecimento": "SUCESSO",
+            "reputacao": "SEM_EVIDENCIA",
+            "threat_intelligence": {
+                "abuse_confidence_score": 0,
+                "total_reports": 198,
+                "last_reported_at": "2026-09-04T12:22:22+00:00",
+                "country_code": "US",
+                "country_name": null,
+                "isp": "Google LLC",
+                "domain": "google.com",
+                "usage_type": "Content Delivery Network",
+                "is_whitelisted": true,
+                "tempo_consulta_ms": 495.1074
+            }
+        },
+        {
+            "ioc_id": "IOC-20260904150829729142",
+            "tipo_ioc": "IP",
+            "valor": "1.1.1.1",
+            "classificacao": "IP_PUBLICO",
+            "publico": true,
+            "valido": true,
+            "extraido_em": "2026-09-04T15:08:29.729213+00:00",
+            "fonte_enriquecimento": "AbuseIPDB",
+            "status_enriquecimento": "SUCESSO",
+            "reputacao": "SEM_EVIDENCIA",
+            "threat_intelligence": {
+                "abuse_confidence_score": 0,
+                "total_reports": 3,
+                "last_reported_at": "2026-09-04T15:00:02+00:00",
+                "country_code": "AU",
+                "country_name": null,
+                "isp": "APNIC and Cloudflare DNS Resolver project",
+                "domain": "cloudflare.com",
+                "usage_type": "Content Delivery Network",
+                "is_whitelisted": true,
+                "tempo_consulta_ms": 279.9561
+            }
+        },
+        {
+            "ioc_id": "IOC-20260904150830026238",
+            "tipo_ioc": "IP",
+            "valor": "192.168.1.50",
+            "classificacao": "IP_PRIVADO",
+            "publico": false,
+            "valido": true,
+            "extraido_em": "2026-09-04T15:08:30.026312+00:00",
+            "fonte_enriquecimento": null,
+            "status_enriquecimento": "IOC_INTERNO",
+            "reputacao": "NAO_APLICAVEL",
+            "threat_intelligence": null
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+# CyberSentinel-ML
+# Aula 45 V2 - SOC Metrics & Observability
+
+cybersentinel_pipeline_components 10
+cybersentinel_pipeline_coverage_percent 100.00
+cybersentinel_pipeline_records_historical 35
+cybersentinel_iocs_historical 2
+cybersentinel_iocs_active 2
+cybersentinel_evidence_records_historical 4
+cybersentinel_evidence_records_current 2
+cybersentinel_evidence_score_current_average 55.00
+cybersentinel_decision_records_historical 4
+cybersentinel_decision_records_current 2
+cybersentinel_decision_score_current_average 58.83
+cybersentinel_soc_cases_historical 4
+cybersentinel_soc_cases_current 2
+cybersentinel_soc_cases_critical 1
+cybersentinel_lifecycle_transitions 2
+cybersentinel_human_approvals 1
+cybersentinel_authorized_actions 1
+cybersentinel_real_executions 0
+cybersentinel_automatic_blocks 0
+cybersentinel_pipeline_health_percent 100.00

@@ -1,0 +1,100 @@
+{
+    "projeto": "CyberSentinel-ML",
+    "aula": 21,
+    "objetivo": "Comparacao entre modelos de Machine Learning para deteccao binaria de trafego.",
+    "dataset": "UNSW-NB15",
+    "quantidade_treinamento": 82332,
+    "quantidade_teste": 175341,
+    "quantidade_features": 9,
+    "features": [
+        "spkts",
+        "dpkts",
+        "sbytes",
+        "dbytes",
+        "rate",
+        "sttl",
+        "dttl",
+        "sload",
+        "dload"
+    ],
+    "target": "label",
+    "baseline": {
+        "modelo": "Decision Tree",
+        "max_depth": 5
+    },
+    "criterio_ranking": [
+        "Menor quantidade de falsos negativos",
+        "Maior Recall",
+        "Maior F1-Score",
+        "Maior Precision"
+    ],
+    "resultados": [
+        {
+            "modelo": "Decision Tree",
+            "accuracy": 90.0366,
+            "precision": 95.237,
+            "recall": 89.8551,
+            "f1_score": 92.4678,
+            "verdadeiros_negativos": 50637,
+            "falsos_positivos": 5363,
+            "falsos_negativos": 12107,
+            "verdadeiros_positivos": 107234,
+            "tempo_treinamento_segundos": 0.4938,
+            "tempo_predicao_segundos": 0.0317
+        },
+        {
+            "modelo": "Random Forest",
+            "accuracy": 90.186,
+            "precision": 97.5201,
+            "recall": 87.8139,
+            "f1_score": 92.4128,
+            "verdadeiros_negativos": 53335,
+            "falsos_positivos": 2665,
+            "falsos_negativos": 14543,
+            "verdadeiros_positivos": 104798,
+            "tempo_treinamento_segundos": 1.9158,
+            "tempo_predicao_segundos": 0.3647
+        },
+        {
+            "modelo": "Logistic Regression",
+            "accuracy": 84.0819,
+            "precision": 90.2711,
+            "recall": 85.8666,
+            "f1_score": 88.0138,
+            "verdadeiros_negativos": 44956,
+            "falsos_positivos": 11044,
+            "falsos_negativos": 16867,
+            "verdadeiros_positivos": 102474,
+            "tempo_treinamento_segundos": 0.279,
+            "tempo_predicao_segundos": 0.0336
+        }
+    ],
+    "ranking": [
+        {
+            "posicao": 1,
+            "modelo": "Decision Tree",
+            "recall": 89.8551,
+            "f1_score": 92.4678,
+            "falsos_negativos": 12107,
+            "falsos_positivos": 5363
+        },
+        {
+            "posicao": 2,
+            "modelo": "Random Forest",
+            "recall": 87.8139,
+            "f1_score": 92.4128,
+            "falsos_negativos": 14543,
+            "falsos_positivos": 2665
+        },
+        {
+            "posicao": 3,
+            "modelo": "Logistic Regression",
+            "recall": 85.8666,
+            "f1_score": 88.0138,
+            "falsos_negativos": 16867,
+            "falsos_positivos": 11044
+        }
+    ],
+    "modelo_vencedor": "Decision Tree",
+    "substituicao_automatica_modelo": false
+}

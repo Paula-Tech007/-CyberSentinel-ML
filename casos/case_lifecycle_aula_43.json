@@ -1,0 +1,42 @@
+[
+    {
+        "transition_id": "TRN-43-20260904170953560825-E649DF18",
+        "timestamp": "2026-09-04T17:09:53.560906+00:00",
+        "case_id": "CASE-42-20260904170021574785-BDE96CDA",
+        "ip_origem": "8.8.8.8",
+        "status_anterior": "ABERTO_PRIORITARIO",
+        "status_novo": "ESCALADO",
+        "fase_anterior": "ESCALACAO",
+        "fase_nova": "ESCALACAO",
+        "owner_anterior": "SOC_ANALYST_ESCALATION",
+        "owner_novo": "SOC_ANALYST_ESCALATION",
+        "motivo": "Caso critico priorizado pelo SOC Decision Engine.",
+        "prioridade_soc": "CRITICO",
+        "decision_score": 92.15,
+        "sla": "IMEDIATO",
+        "transicao_permitida": true,
+        "requer_aprovacao_humana": true,
+        "bloqueio_automatico": false,
+        "modo_operacional": "SIMULACAO"
+    },
+    {
+        "transition_id": "TRN-43-20260904170953575749-752328EB",
+        "timestamp": "2026-09-04T17:09:53.575780+00:00",
+        "case_id": "CASE-42-20260904170021585316-FC79FAC1",
+        "ip_origem": "1.1.1.1",
+        "status_anterior": "MONITORAMENTO",
+        "status_novo": "MONITORAMENTO",
+        "fase_anterior": "MONITORAMENTO",
+        "fase_nova": "MONITORAMENTO",
+        "owner_anterior": "SOC_MONITORING_QUEUE",
+        "owner_novo": "SOC_MONITORING_QUEUE",
+        "motivo": "Caso de baixa prioridade permanece em monitoramento.",
+        "prioridade_soc": "BAIXO",
+        "decision_score": 25.5,
+        "sla": "ATE_8_HORAS",
+        "transicao_permitida": true,
+        "requer_aprovacao_humana": false,
+        "bloqueio_automatico": false,
+        "modo_operacional": "SIMULACAO"
+    }
+]

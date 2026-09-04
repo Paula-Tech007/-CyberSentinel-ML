@@ -1,0 +1,156 @@
+{
+    "projeto": "CyberSentinel-ML",
+    "aula": 34,
+    "timestamp": "2026-09-04T15:14:13.923000+00:00",
+    "estatisticas": {
+        "eventos_recebidos": 3,
+        "eventos_validos": 3,
+        "eventos_invalidos": 0,
+        "normais": 0,
+        "ataques": 3,
+        "consultas_ti": 2,
+        "consultas_sucesso": 2,
+        "consultas_erro": 0,
+        "risk_scores_gerados": 3,
+        "baixo": 0,
+        "medio": 2,
+        "alto": 0,
+        "critico": 1,
+        "alertas": 3
+    },
+    "resultados": [
+        {
+            "risk_id": "RISK-20260904151413628513",
+            "id_evento": "RISK-34-001",
+            "ip_origem": "8.8.8.8",
+            "classificacao": "ATAQUE",
+            "probabilidade_ataque": 0.099815,
+            "categoria": "DoS",
+            "confianca_categoria": 0.821908,
+            "threat_intelligence": {
+                "status": "SUCESSO",
+                "abuse_score": 0,
+                "reports": 198,
+                "pais": "US",
+                "isp": "Google LLC",
+                "dominio": "google.com",
+                "tempo_ms": 434.0034
+            },
+            "risk_score": 39.32,
+            "nivel_risco": "MEDIO",
+            "modo_calculo": "ML_TI",
+            "componentes": {
+                "probabilidade_ml": {
+                    "valor": 9.98,
+                    "peso": 30
+                },
+                "confianca_categoria": {
+                    "valor": 82.19,
+                    "peso": 15
+                },
+                "risco_categoria": {
+                    "valor": 70,
+                    "peso": 20
+                },
+                "abuse_score": {
+                    "valor": 0.0,
+                    "peso": 25
+                },
+                "reports": {
+                    "valor": 100,
+                    "peso": 10
+                }
+            },
+            "timestamp": "2026-09-04T15:14:13.628540+00:00",
+            "alerta_id": "RISK-ALT-20260904151413628547",
+            "alerta_soc": true,
+            "status": "PROCESSADO"
+        },
+        {
+            "risk_id": "RISK-20260904151413916945",
+            "id_evento": "RISK-34-002",
+            "ip_origem": "1.1.1.1",
+            "classificacao": "ATAQUE",
+            "probabilidade_ataque": 0.406258,
+            "categoria": "Shellcode",
+            "confianca_categoria": 0.889117,
+            "threat_intelligence": {
+                "status": "SUCESSO",
+                "abuse_score": 0,
+                "reports": 3,
+                "pais": "AU",
+                "isp": "APNIC and Cloudflare DNS Resolver project",
+                "dominio": "cloudflare.com",
+                "tempo_ms": 283.9445
+            },
+            "risk_score": 46.52,
+            "nivel_risco": "MEDIO",
+            "modo_calculo": "ML_TI",
+            "componentes": {
+                "probabilidade_ml": {
+                    "valor": 40.63,
+                    "peso": 30
+                },
+                "confianca_categoria": {
+                    "valor": 88.91,
+                    "peso": 15
+                },
+                "risco_categoria": {
+                    "valor": 95,
+                    "peso": 20
+                },
+                "abuse_score": {
+                    "valor": 0.0,
+                    "peso": 25
+                },
+                "reports": {
+                    "valor": 20,
+                    "peso": 10
+                }
+            },
+            "timestamp": "2026-09-04T15:14:13.916972+00:00",
+            "alerta_id": "RISK-ALT-20260904151413916979",
+            "alerta_soc": true,
+            "status": "PROCESSADO"
+        },
+        {
+            "risk_id": "RISK-20260904151413919480",
+            "id_evento": "RISK-34-003",
+            "ip_origem": "192.168.1.50",
+            "classificacao": "ATAQUE",
+            "probabilidade_ataque": 0.933634,
+            "categoria": "Exploits",
+            "confianca_categoria": 1.0,
+            "threat_intelligence": {
+                "status": "NAO_CONSULTADO",
+                "motivo": "PRIVADO",
+                "abuse_score": 0,
+                "reports": 0
+            },
+            "risk_score": 95.4,
+            "nivel_risco": "CRITICO",
+            "modo_calculo": "SOMENTE_ML",
+            "componentes": {
+                "probabilidade_ml": {
+                    "valor": 93.36,
+                    "peso_efetivo": 46.15
+                },
+                "confianca_categoria": {
+                    "valor": 100.0,
+                    "peso_efetivo": 23.08
+                },
+                "risco_categoria": {
+                    "valor": 95,
+                    "peso_efetivo": 30.77
+                },
+                "threat_intelligence": {
+                    "status": "NAO_DISPONIVEL"
+                }
+            },
+            "timestamp": "2026-09-04T15:14:13.919498+00:00",
+            "alerta_id": "RISK-ALT-20260904151413919503",
+            "alerta_soc": true,
+            "status": "PROCESSADO"
+        }
+    ]
+}

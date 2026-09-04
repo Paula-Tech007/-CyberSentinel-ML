@@ -1,0 +1,21 @@
+[
+    {
+        "alerta_id": "CAMP-ALT-20260904153902140340",
+        "campanha_id": "CAMP-36-0001",
+        "ioc": "8.8.8.8",
+        "tipo": "CAMPANHA_IOC",
+        "quantidade_eventos": 3,
+        "categorias": [
+            "DoS",
+            "Exploits",
+            "Shellcode"
+        ],
+        "risk_score_medio": 63.28,
+        "risk_score_maximo": 88.01,
+        "score_campanha": 85,
+        "severidade": "CRITICO",
+        "status": "ABERTO",
+        "descricao": "Padrao de campanha detectado por reincidencia e diversidade de categorias.",
+        "timestamp": "2026-09-04T15:39:02.140403+00:00"
+    }
+]

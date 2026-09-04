@@ -1,0 +1,14 @@
+[
+    {
+        "id_evento": "EXT-24-004",
+        "timestamp": "2026-09-04T12:14:58.344428+00:00",
+        "motivo": "Feature obrigatoria ausente: dbytes",
+        "evento": {
+            "id_evento": "EXT-24-004",
+            "origem": "LAB_JSON",
+            "spkts": 4,
+            "dpkts": 2,
+            "sbytes": 1000
+        }
+    }
+]

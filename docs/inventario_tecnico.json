@@ -1,0 +1,154 @@
+{
+    "projeto": "CyberSentinel-ML",
+    "aula": 48,
+    "versao": "2.0",
+    "timestamp": "2026-09-04T18:10:46.326075+00:00",
+    "machine_learning": {
+        "esperados": 4,
+        "disponiveis": 4,
+        "artefatos": {
+            "modelo_binario": {
+                "arquivo": "modelos\\unsw_decision_tree.joblib",
+                "disponivel": true
+            },
+            "configuracao_binaria": {
+                "arquivo": "modelos\\configuracao_modelo.joblib",
+                "disponivel": true
+            },
+            "modelo_multiclasse": {
+                "arquivo": "modelos\\unsw_attack_multiclass_otimizado.joblib",
+                "disponivel": true
+            },
+            "configuracao_multiclasse": {
+                "arquivo": "modelos\\configuracao_multiclasse_otimizada_aula_22.joblib",
+                "disponivel": true
+            }
+        }
+    },
+    "sqlite": {
+        "arquivo": "dados\\cybersentinel.db",
+        "total_tabelas": 18,
+        "tabelas": {
+            "alertas": {
+                "registros": 2,
+                "colunas": 9
+            },
+            "alertas_operacionais": {
+                "registros": 1,
+                "colunas": 10
+            },
+            "baselines_operacionais": {
+                "registros": 1,
+                "colunas": 11
+            },
+            "campanhas_ioc": {
+                "registros": 2,
+                "colunas": 11
+            },
+            "correlacao_ioc_eventos": {
+                "registros": 4,
+                "colunas": 14
+            },
+            "eventos": {
+                "registros": 2,
+                "colunas": 20
+            },
+            "incident_evidence": {
+                "registros": 4,
+                "colunas": 42
+            },
+            "incident_response_playbooks": {
+                "registros": 4,
+                "colunas": 13
+            },
+            "incident_timelines": {
+                "registros": 2,
+                "colunas": 14
+            },
+            "metricas": {
+                "registros": 1,
+                "colunas": 13
+            },
+            "mitre_attack_mapping": {
+                "registros": 8,
+                "colunas": 15
+            },
+            "soc_case_transitions": {
+                "registros": 2,
+                "colunas": 18
+            },
+            "soc_end_to_end_runs": {
+                "registros": 3,
+                "colunas": 15
+            },
+            "soc_final_validation_runs": {
+                "registros": 2,
+                "colunas": 15
+            },
+            "soc_human_approvals": {
+                "registros": 1,
+                "colunas": 19
+            },
+            "soc_incident_cases": {
+                "registros": 4,
+                "colunas": 41
+            },
+            "soc_incident_decisions": {
+                "registros": 4,
+                "colunas": 25
+            },
+            "soc_observability_snapshots": {
+                "registros": 2,
+                "colunas": 22
+            }
+        }
+    },
+    "componentes": [
+        "Machine Learning - Binary Classification",
+        "Machine Learning - Multiclass Classification",
+        "JSON / JSONL Ingestion",
+        "REST API",
+        "Batch Processing",
+        "SQLite Persistence",
+        "Operational Observability",
+        "Operational Alerts",
+        "Threat Intelligence",
+        "AbuseIPDB Integration",
+        "IOC Enrichment",
+        "Risk Score V2",
+        "Historical IOC Correlation",
+        "Campaign Detection",
+        "Incident Timeline",
+        "Incident Response Playbooks",
+        "MITRE ATT&CK Context",
+        "Incident Evidence Correlation",
+        "SOC Incident Decision Engine",
+        "SOC Case Management",
+        "SOC Case Lifecycle",
+        "Human Approval Gate",
+        "SOC Metrics & Observability",
+        "Pipeline End-to-End",
+        "Final Validation Test Suite"
+    ],
+    "iocs_ativos": 2,
+    "observability": {
+        "health": 100.0
+    },
+    "end_to_end": {
+        "health": 100.0,
+        "lineages_completos": 2,
+        "decision_evidence": true,
+        "mitre_consistente": true
+    },
+    "testes_finais": {
+        "total": 103,
+        "ok": 103,
+        "falhas": 0,
+        "cobertura": 100.0
+    },
+    "seguranca": {
+        "execucoes_reais": 0,
+        "bloqueios_automaticos": 0,
+        "modo_operacional": "SIMULACAO"
+    }
+}

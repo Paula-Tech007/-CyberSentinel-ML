@@ -1,0 +1,68 @@
+[
+    {
+        "campanha_id": "CAMP-36-0001",
+        "ioc": "8.8.8.8",
+        "quantidade_eventos": 3,
+        "quantidade_categorias": 3,
+        "categorias": [
+            "DoS",
+            "Exploits",
+            "Shellcode"
+        ],
+        "risk_score_medio": 63.28,
+        "risk_score_maximo": 88.01,
+        "score_campanha": 85,
+        "nivel": "CRITICO",
+        "status": "CAMPANHA_DETECTADA",
+        "campanha_detectada": true,
+        "eventos": [
+            {
+                "ioc": "8.8.8.8",
+                "categoria": "DoS",
+                "risk_score": 39.32,
+                "prioridade": "MEDIO",
+                "timestamp": "2026-09-04T15:36:05.202435+00:00"
+            },
+            {
+                "ioc": "8.8.8.8",
+                "categoria": "Shellcode",
+                "risk_score": 62.52,
+                "prioridade": "ALTO",
+                "timestamp": "2026-09-04T15:36:05.219391+00:00"
+            },
+            {
+                "ioc": "8.8.8.8",
+                "categoria": "Exploits",
+                "risk_score": 88.01,
+                "prioridade": "CRITICO",
+                "timestamp": "2026-09-04T15:36:05.231528+00:00"
+            }
+        ],
+        "timestamp": "2026-09-04T15:39:02.133777+00:00"
+    },
+    {
+        "campanha_id": "CAMP-36-0002",
+        "ioc": "1.1.1.1",
+        "quantidade_eventos": 1,
+        "quantidade_categorias": 1,
+        "categorias": [
+            "Shellcode"
+        ],
+        "risk_score_medio": 46.52,
+        "risk_score_maximo": 46.52,
+        "score_campanha": 10,
+        "nivel": "BAIXO",
+        "status": "PADRAO_INSUFICIENTE",
+        "campanha_detectada": false,
+        "eventos": [
+            {
+                "ioc": "1.1.1.1",
+                "categoria": "Shellcode",
+                "risk_score": 46.52,
+                "prioridade": "MEDIO",
+                "timestamp": "2026-09-04T15:36:05.490990+00:00"
+            }
+        ],
+        "timestamp": "2026-09-04T15:39:02.133801+00:00"
+    }
+]

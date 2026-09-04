@@ -1,0 +1,22 @@
+{
+    "projeto": "CyberSentinel-ML",
+    "aula": 46,
+    "versao": "3.0",
+    "run_id": "E2E-46-V3-20260904174828429712-C9D142EC",
+    "artefatos_ml": "4/4",
+    "componentes": "11/11",
+    "iocs_ativos": 2,
+    "lineages_completos": 2,
+    "decision_evidence_link": true,
+    "mitre_consistente": true,
+    "observability_health": 100.0,
+    "execucoes_reais": 0,
+    "bloqueios_automaticos": 0,
+    "modo_operacional": "SIMULACAO",
+    "validacoes": {
+        "total": 34,
+        "ok": 34,
+        "saude": 100.0
+    },
+    "status": "AULA 46 V3 CONCLUIDA"
+}

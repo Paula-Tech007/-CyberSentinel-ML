@@ -1,0 +1,76 @@
+[
+    {
+        "evidence_id": "EVD-40-20260904161034597187-2B484D57",
+        "timestamp": "2026-09-04T16:10:34.597261+00:00",
+        "ip_origem": "1.1.1.1",
+        "total_eventos": 1,
+        "categorias_distintas": 1,
+        "categorias": [
+            "Shellcode"
+        ],
+        "risk_score_maximo": 46.52,
+        "campanha_detectada": false,
+        "score_campanha": 0.0,
+        "nivel_campanha": "BAIXO",
+        "origem_score_campanha": "BANCO",
+        "timeline_id": "TL-37-0002",
+        "status_timeline": "EVENTO_ISOLADO",
+        "variacao_risco": 0.0,
+        "tendencia_timeline": "SEM_HISTORICO",
+        "playbook_id": "PB-38-20260904154440-957F4671",
+        "prioridade_playbook": "MEDIO",
+        "acao_recomendada": "TRIAGEM_SOC",
+        "mitre_contexto": "EXECUCAO_POTENCIAL",
+        "mitre_tatica": "Execution",
+        "mitre_technique_id": "NAO_ATRIBUIDA",
+        "mitre_confianca": "CONTEXTUAL",
+        "evidence_score": 18.0,
+        "nivel_evidencia": "BAIXO",
+        "confianca_evidencia": "ALTA",
+        "fontes_correlacionadas": 5,
+        "componentes": [
+            "HISTORICO_ISOLADO",
+            "MITRE_CONTEXTUAL"
+        ]
+    },
+    {
+        "evidence_id": "EVD-40-20260904161034606156-FF22D18F",
+        "timestamp": "2026-09-04T16:10:34.606235+00:00",
+        "ip_origem": "8.8.8.8",
+        "total_eventos": 3,
+        "categorias_distintas": 3,
+        "categorias": [
+            "DoS",
+            "Exploits",
+            "Shellcode"
+        ],
+        "risk_score_maximo": 88.01,
+        "campanha_detectada": true,
+        "score_campanha": 85.0,
+        "nivel_campanha": "CRITICO",
+        "origem_score_campanha": "RECONSTRUIDO",
+        "timeline_id": "TL-37-0001",
+        "status_timeline": "INCIDENTE_CRITICO",
+        "variacao_risco": 48.69,
+        "tendencia_timeline": "FORTE_CRESCIMENTO",
+        "playbook_id": "PB-38-20260904154440-76E2CC54",
+        "prioridade_playbook": "CRITICO",
+        "acao_recomendada": "ESCALACAO_E_CONTENCAO",
+        "mitre_contexto": "IMPACTO",
+        "mitre_tatica": "Impact",
+        "mitre_technique_id": "NAO_ATRIBUIDA",
+        "mitre_confianca": "CONTEXTUAL",
+        "evidence_score": 92.0,
+        "nivel_evidencia": "CRITICO",
+        "confianca_evidencia": "ALTA",
+        "fontes_correlacionadas": 5,
+        "componentes": [
+            "HISTORICO_REINCIDENTE",
+            "DIVERSIDADE_ALTA",
+            "CAMPANHA_DETECTADA",
+            "TIMELINE_CRITICA",
+            "PLAYBOOK_CRITICO",
+            "MITRE_CONTEXTUAL"
+        ]
+    }
+]

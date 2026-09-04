@@ -1,0 +1,25 @@
+{
+    "projeto": "CyberSentinel-ML",
+    "aula": 43,
+    "versao": "1.0",
+    "timestamp": "2026-09-04T17:09:53.592484+00:00",
+    "casos_historicos": 4,
+    "casos_processados": 2,
+    "transicoes": 2,
+    "transicoes_permitidas": 2,
+    "transicoes_bloqueadas": 0,
+    "requerem_aprovacao_humana": 1,
+    "alertas": 1,
+    "status_casos": {
+        "ESCALADO": 1,
+        "MONITORAMENTO": 1
+    },
+    "bloqueios_automaticos": 0,
+    "modo_operacional": "SIMULACAO",
+    "validacoes": {
+        "total": 20,
+        "ok": 20,
+        "saude": 100.0
+    },
+    "status": "AULA 43 CONCLUIDA"
+}

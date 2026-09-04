@@ -1,0 +1,59 @@
+{
+    "projeto": "CyberSentinel-ML",
+    "aula": 35,
+    "timestamp": "2026-09-04T15:36:05.507070+00:00",
+    "alertas": [
+        {
+            "alerta_id": "CORR-ALT-20260904153605202410",
+            "id_evento": "CORR-35-001",
+            "ip_origem": "8.8.8.8",
+            "categoria": "DoS",
+            "status_correlacao": "NOVO",
+            "ocorrencias_total": 1,
+            "risk_score_base": 39.32,
+            "bonus_correlacao": 0,
+            "risk_score_final": 39.32,
+            "prioridade_soc": "MEDIO",
+            "timestamp": "2026-09-04T15:36:05.202435+00:00"
+        },
+        {
+            "alerta_id": "CORR-ALT-20260904153605219364",
+            "id_evento": "CORR-35-002",
+            "ip_origem": "8.8.8.8",
+            "categoria": "Shellcode",
+            "status_correlacao": "REINCIDENTE",
+            "ocorrencias_total": 2,
+            "risk_score_base": 54.52,
+            "bonus_correlacao": 8,
+            "risk_score_final": 62.52,
+            "prioridade_soc": "ALTO",
+            "timestamp": "2026-09-04T15:36:05.219391+00:00"
+        },
+        {
+            "alerta_id": "CORR-ALT-20260904153605231502",
+            "id_evento": "CORR-35-003",
+            "ip_origem": "8.8.8.8",
+            "categoria": "Exploits",
+            "status_correlacao": "REINCIDENTE",
+            "ocorrencias_total": 3,
+            "risk_score_base": 72.01,
+            "bonus_correlacao": 16,
+            "risk_score_final": 88.01,
+            "prioridade_soc": "CRITICO",
+            "timestamp": "2026-09-04T15:36:05.231528+00:00"
+        },
+        {
+            "alerta_id": "CORR-ALT-20260904153605490960",
+            "id_evento": "CORR-35-004",
+            "ip_origem": "1.1.1.1",
+            "categoria": "Shellcode",
+            "status_correlacao": "NOVO",
+            "ocorrencias_total": 1,
+            "risk_score_base": 46.52,
+            "bonus_correlacao": 0,
+            "risk_score_final": 46.52,
+            "prioridade_soc": "MEDIO",
+            "timestamp": "2026-09-04T15:36:05.490990+00:00"
+        }
+    ]
+}

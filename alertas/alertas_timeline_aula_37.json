@@ -1,0 +1,22 @@
+[
+    {
+        "alerta_id": "TL-ALT-20260904154133707934",
+        "timeline_id": "TL-37-0001",
+        "ioc": "8.8.8.8",
+        "tipo": "CORRELACAO_TEMPORAL",
+        "status_incidente": "INCIDENTE_CRITICO",
+        "severidade": "CRITICO",
+        "quantidade_eventos": 3,
+        "categorias": [
+            "DoS",
+            "Exploits",
+            "Shellcode"
+        ],
+        "score_inicial": 39.32,
+        "score_final": 88.01,
+        "score_maximo": 88.01,
+        "tendencia": "FORTE_CRESCIMENTO",
+        "status": "ABERTO",
+        "timestamp": "2026-09-04T15:41:33.707988+00:00"
+    }
+]

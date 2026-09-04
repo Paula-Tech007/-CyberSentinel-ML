@@ -1,0 +1,872 @@
+{
+    "projeto": "CyberSentinel-ML",
+    "aula": 47,
+    "versao": "2.0",
+    "validation_id": "VAL-47-V2-20260904180255212095-023892A0",
+    "timestamp": "2026-09-04T18:02:55.239212+00:00",
+    "ambiente": {
+        "modo_operacional": "SIMULACAO",
+        "iocs_ativos": [
+            "1.1.1.1",
+            "8.8.8.8"
+        ]
+    },
+    "resultado": {
+        "testes_total": 103,
+        "testes_ok": 103,
+        "testes_falha": 0,
+        "cobertura": 100.0
+    },
+    "categorias": {
+        "AMBIENTE": {
+            "total": 3,
+            "ok": 3,
+            "falhas": 0
+        },
+        "MACHINE_LEARNING": {
+            "total": 8,
+            "ok": 8,
+            "falhas": 0
+        },
+        "SQLITE": {
+            "total": 24,
+            "ok": 24,
+            "falhas": 0
+        },
+        "SCHEMA": {
+            "total": 12,
+            "ok": 12,
+            "falhas": 0
+        },
+        "IOC": {
+            "total": 3,
+            "ok": 3,
+            "falhas": 0
+        },
+        "SCORES": {
+            "total": 3,
+            "ok": 3,
+            "falhas": 0
+        },
+        "LINEAGE": {
+            "total": 2,
+            "ok": 2,
+            "falhas": 0
+        },
+        "MITRE": {
+            "total": 2,
+            "ok": 2,
+            "falhas": 0
+        },
+        "CASE": {
+            "total": 6,
+            "ok": 6,
+            "falhas": 0
+        },
+        "LIFECYCLE": {
+            "total": 3,
+            "ok": 3,
+            "falhas": 0
+        },
+        "APPROVAL": {
+            "total": 4,
+            "ok": 4,
+            "falhas": 0
+        },
+        "CENARIO_CRITICO": {
+            "total": 2,
+            "ok": 2,
+            "falhas": 0
+        },
+        "CENARIO_BAIXO": {
+            "total": 2,
+            "ok": 2,
+            "falhas": 0
+        },
+        "OBSERVABILITY": {
+            "total": 3,
+            "ok": 3,
+            "falhas": 0
+        },
+        "END_TO_END": {
+            "total": 7,
+            "ok": 7,
+            "falhas": 0
+        },
+        "ARQUIVOS": {
+            "total": 10,
+            "ok": 10,
+            "falhas": 0
+        },
+        "JSON": {
+            "total": 5,
+            "ok": 5,
+            "falhas": 0
+        },
+        "SEGURANCA": {
+            "total": 4,
+            "ok": 4,
+            "falhas": 0
+        }
+    },
+    "checks_finais": {
+        "machine_learning": true,
+        "schemas": true,
+        "lineage": true,
+        "seguranca": true
+    },
+    "seguranca": {
+        "execucoes_reais": 0,
+        "bloqueios_automaticos": 0,
+        "modo_operacional": "SIMULACAO"
+    },
+    "testes": [
+        {
+            "categoria": "AMBIENTE",
+            "teste": "Diretorio testes disponivel",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "AMBIENTE",
+            "teste": "Diretorio alertas disponivel",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "AMBIENTE",
+            "teste": "Banco SQLite existe",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": "C:\\Users\\a952658\\OneDrive - ATOS\\Desktop\\machine-learning-cyber\\dados\\cybersentinel.db"
+        },
+        {
+            "categoria": "MACHINE_LEARNING",
+            "teste": "Artefato modelo_binario existe",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": "unsw_decision_tree.joblib"
+        },
+        {
+            "categoria": "MACHINE_LEARNING",
+            "teste": "Artefato modelo_binario nao esta vazio",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 4553
+        },
+        {
+            "categoria": "MACHINE_LEARNING",
+            "teste": "Artefato configuracao_binaria existe",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": "configuracao_modelo.joblib"
+        },
+        {
+            "categoria": "MACHINE_LEARNING",
+            "teste": "Artefato configuracao_binaria nao esta vazio",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 154
+        },
+        {
+            "categoria": "MACHINE_LEARNING",
+            "teste": "Artefato modelo_multiclasse existe",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": "unsw_attack_multiclass_otimizado.joblib"
+        },
+        {
+            "categoria": "MACHINE_LEARNING",
+            "teste": "Artefato modelo_multiclasse nao esta vazio",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 749969
+        },
+        {
+            "categoria": "MACHINE_LEARNING",
+            "teste": "Artefato configuracao_multiclasse existe",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": "configuracao_multiclasse_otimizada_aula_22.joblib"
+        },
+        {
+            "categoria": "MACHINE_LEARNING",
+            "teste": "Artefato configuracao_multiclasse nao esta vazio",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 857
+        },
+        {
+            "categoria": "SQLITE",
+            "teste": "Tabela campanhas_ioc existe",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "SQLITE",
+            "teste": "Tabela campanhas_ioc possui registros",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 2
+        },
+        {
+            "categoria": "SQLITE",
+            "teste": "Tabela correlacao_ioc_eventos existe",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "SQLITE",
+            "teste": "Tabela correlacao_ioc_eventos possui registros",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 4
+        },
+        {
+            "categoria": "SQLITE",
+            "teste": "Tabela incident_evidence existe",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "SQLITE",
+            "teste": "Tabela incident_evidence possui registros",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 4
+        },
+        {
+            "categoria": "SQLITE",
+            "teste": "Tabela incident_response_playbooks existe",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "SQLITE",
+            "teste": "Tabela incident_response_playbooks possui registros",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 4
+        },
+        {
+            "categoria": "SQLITE",
+            "teste": "Tabela incident_timelines existe",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "SQLITE",
+            "teste": "Tabela incident_timelines possui registros",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 2
+        },
+        {
+            "categoria": "SQLITE",
+            "teste": "Tabela mitre_attack_mapping existe",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "SQLITE",
+            "teste": "Tabela mitre_attack_mapping possui registros",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 8
+        },
+        {
+            "categoria": "SQLITE",
+            "teste": "Tabela soc_case_transitions existe",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "SQLITE",
+            "teste": "Tabela soc_case_transitions possui registros",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 2
+        },
+        {
+            "categoria": "SQLITE",
+            "teste": "Tabela soc_end_to_end_runs existe",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "SQLITE",
+            "teste": "Tabela soc_end_to_end_runs possui registros",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 3
+        },
+        {
+            "categoria": "SQLITE",
+            "teste": "Tabela soc_human_approvals existe",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "SQLITE",
+            "teste": "Tabela soc_human_approvals possui registros",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 1
+        },
+        {
+            "categoria": "SQLITE",
+            "teste": "Tabela soc_incident_cases existe",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "SQLITE",
+            "teste": "Tabela soc_incident_cases possui registros",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 4
+        },
+        {
+            "categoria": "SQLITE",
+            "teste": "Tabela soc_incident_decisions existe",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "SQLITE",
+            "teste": "Tabela soc_incident_decisions possui registros",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 4
+        },
+        {
+            "categoria": "SQLITE",
+            "teste": "Tabela soc_observability_snapshots existe",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "SQLITE",
+            "teste": "Tabela soc_observability_snapshots possui registros",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 2
+        },
+        {
+            "categoria": "SCHEMA",
+            "teste": "Schema minimo de correlacao_ioc_eventos",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "SCHEMA",
+            "teste": "Schema minimo de campanhas_ioc",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "SCHEMA",
+            "teste": "Schema minimo de incident_timelines",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "SCHEMA",
+            "teste": "Schema minimo de incident_response_playbooks",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "SCHEMA",
+            "teste": "Schema minimo de mitre_attack_mapping",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "SCHEMA",
+            "teste": "Schema minimo de incident_evidence",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "SCHEMA",
+            "teste": "Schema minimo de soc_incident_decisions",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "SCHEMA",
+            "teste": "Schema minimo de soc_incident_cases",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "SCHEMA",
+            "teste": "Schema minimo de soc_case_transitions",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "SCHEMA",
+            "teste": "Schema minimo de soc_human_approvals",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "SCHEMA",
+            "teste": "Schema minimo de soc_observability_snapshots",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "SCHEMA",
+            "teste": "Schema minimo de soc_end_to_end_runs",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "IOC",
+            "teste": "Existem IOCs ativos",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": [
+                "1.1.1.1",
+                "8.8.8.8"
+            ]
+        },
+        {
+            "categoria": "IOC",
+            "teste": "Todos os IOCs ativos sao IPs validos",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": [
+                "1.1.1.1",
+                "8.8.8.8"
+            ]
+        },
+        {
+            "categoria": "IOC",
+            "teste": "Conjunto atual corresponde ao laboratorio",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": "atual=['1.1.1.1', '8.8.8.8'] esperado=['1.1.1.1', '8.8.8.8']"
+        },
+        {
+            "categoria": "SCORES",
+            "teste": "Risk Scores entre 0 e 100",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": [
+                39.32,
+                62.52,
+                88.01,
+                46.52
+            ]
+        },
+        {
+            "categoria": "SCORES",
+            "teste": "Evidence Scores entre 0 e 100",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": [
+                30.0,
+                82.0,
+                18.0,
+                92.0
+            ]
+        },
+        {
+            "categoria": "SCORES",
+            "teste": "Decision Scores entre 0 e 100",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": [
+                25.5,
+                92.15,
+                25.5,
+                92.15
+            ]
+        },
+        {
+            "categoria": "LINEAGE",
+            "teste": "1.1.1.1 Decision referencia Evidence exato",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": "EVD-40-20260904161034597187-2B484D57"
+        },
+        {
+            "categoria": "LINEAGE",
+            "teste": "8.8.8.8 Decision referencia Evidence exato",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": "EVD-40-20260904161034606156-FF22D18F"
+        },
+        {
+            "categoria": "MITRE",
+            "teste": "1.1.1.1 possui MITRE canonico completo",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": "EXECUCAO_POTENCIAL | Execution | CONTEXTUAL"
+        },
+        {
+            "categoria": "MITRE",
+            "teste": "8.8.8.8 possui MITRE canonico completo",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": "IMPACTO | Impact | CONTEXTUAL"
+        },
+        {
+            "categoria": "CASE",
+            "teste": "1.1.1.1 possui Case ID",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": "CASE-42-20260904170021585316-FC79FAC1"
+        },
+        {
+            "categoria": "CASE",
+            "teste": "1.1.1.1 possui prioridade SOC",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": "BAIXO"
+        },
+        {
+            "categoria": "CASE",
+            "teste": "1.1.1.1 possui status operacional",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": "MONITORAMENTO"
+        },
+        {
+            "categoria": "CASE",
+            "teste": "8.8.8.8 possui Case ID",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": "CASE-42-20260904170021574785-BDE96CDA"
+        },
+        {
+            "categoria": "CASE",
+            "teste": "8.8.8.8 possui prioridade SOC",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": "CRITICO"
+        },
+        {
+            "categoria": "CASE",
+            "teste": "8.8.8.8 possui status operacional",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": "APROVADO_PARA_ACAO"
+        },
+        {
+            "categoria": "LIFECYCLE",
+            "teste": "Lifecycle possui transicoes",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 2
+        },
+        {
+            "categoria": "LIFECYCLE",
+            "teste": "Lifecycle nao possui bloqueio automatico",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 0
+        },
+        {
+            "categoria": "LIFECYCLE",
+            "teste": "Lifecycle permanece em SIMULACAO",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": [
+                "SIMULACAO"
+            ]
+        },
+        {
+            "categoria": "APPROVAL",
+            "teste": "Existe registro de Human Approval",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 1
+        },
+        {
+            "categoria": "APPROVAL",
+            "teste": "Approval nao executou acao real",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 0
+        },
+        {
+            "categoria": "APPROVAL",
+            "teste": "Approval nao realizou bloqueio automatico",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 0
+        },
+        {
+            "categoria": "APPROVAL",
+            "teste": "Approval permanece em SIMULACAO",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": [
+                "SIMULACAO"
+            ]
+        },
+        {
+            "categoria": "CENARIO_CRITICO",
+            "teste": "8.8.8.8 possui prioridade CRITICO",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "CENARIO_CRITICO",
+            "teste": "8.8.8.8 possui Decision Score 92.15",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "CENARIO_BAIXO",
+            "teste": "1.1.1.1 possui prioridade BAIXO",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "CENARIO_BAIXO",
+            "teste": "1.1.1.1 possui Decision Score 25.50",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "OBSERVABILITY",
+            "teste": "Snapshot de observabilidade existe",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "OBSERVABILITY",
+            "teste": "Observability Health esta em 100%",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 100.0
+        },
+        {
+            "categoria": "OBSERVABILITY",
+            "teste": "Observability possui 2 IOCs ativos",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 2
+        },
+        {
+            "categoria": "END_TO_END",
+            "teste": "Run End-to-End existe",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "END_TO_END",
+            "teste": "Ultimo End-to-End possui Health 100%",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 100.0
+        },
+        {
+            "categoria": "END_TO_END",
+            "teste": "Ultimo End-to-End possui 2 IOCs ativos",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 2
+        },
+        {
+            "categoria": "END_TO_END",
+            "teste": "Ultimo End-to-End possui 2 lineages completos",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 2
+        },
+        {
+            "categoria": "END_TO_END",
+            "teste": "Ultimo End-to-End possui MITRE consistente",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": true
+        },
+        {
+            "categoria": "END_TO_END",
+            "teste": "Ultimo End-to-End possui zero execucoes reais",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "END_TO_END",
+            "teste": "Ultimo End-to-End possui zero bloqueios automaticos",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "ARQUIVOS",
+            "teste": "observability_json existe",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": "metricas\\soc_metrics_aula_45.json"
+        },
+        {
+            "categoria": "ARQUIVOS",
+            "teste": "observability_json nao esta vazio",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 7827
+        },
+        {
+            "categoria": "ARQUIVOS",
+            "teste": "observability_prom existe",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": "metricas\\soc_metrics_aula_45.prom"
+        },
+        {
+            "categoria": "ARQUIVOS",
+            "teste": "observability_prom nao esta vazio",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 866
+        },
+        {
+            "categoria": "ARQUIVOS",
+            "teste": "end_to_end existe",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": "pipeline\\end_to_end_aula_46.json"
+        },
+        {
+            "categoria": "ARQUIVOS",
+            "teste": "end_to_end nao esta vazio",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 9870
+        },
+        {
+            "categoria": "ARQUIVOS",
+            "teste": "relatorio_aula_45 existe",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": "alertas\\relatorio_aula_45.json"
+        },
+        {
+            "categoria": "ARQUIVOS",
+            "teste": "relatorio_aula_45 nao esta vazio",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 1018
+        },
+        {
+            "categoria": "ARQUIVOS",
+            "teste": "relatorio_aula_46 existe",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": "alertas\\relatorio_aula_46.json"
+        },
+        {
+            "categoria": "ARQUIVOS",
+            "teste": "relatorio_aula_46 nao esta vazio",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 582
+        },
+        {
+            "categoria": "JSON",
+            "teste": "end_to_end_aula_46.json possui JSON valido",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "JSON",
+            "teste": "Arquivo End-to-End registra Aula 46",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "JSON",
+            "teste": "Arquivo End-to-End registra versao 3",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "JSON",
+            "teste": "JSON confirma Decision -> Evidence",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "JSON",
+            "teste": "JSON confirma MITRE consistente",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        },
+        {
+            "categoria": "SEGURANCA",
+            "teste": "Decision Engine nunca habilitou auto-block",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 0
+        },
+        {
+            "categoria": "SEGURANCA",
+            "teste": "Pipeline possui zero execucoes reais",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 0
+        },
+        {
+            "categoria": "SEGURANCA",
+            "teste": "Pipeline possui zero bloqueios automaticos",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": 0
+        },
+        {
+            "categoria": "SEGURANCA",
+            "teste": "Modo global e SIMULACAO",
+            "resultado": "PASS",
+            "ok": true,
+            "detalhes": null
+        }
+    ],
+    "status": "AULA 47 V2 CONCLUIDA"
+}

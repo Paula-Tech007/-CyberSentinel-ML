@@ -1,0 +1,12 @@
+{
+    "projeto": "CyberSentinel-ML",
+    "aula": 37,
+    "titulo": "Timeline de Incidente e Correlacao Temporal",
+    "eventos_historicos": 4,
+    "timelines": 2,
+    "incidentes_criticos": 1,
+    "incidentes_correlacionados": 0,
+    "escaladas_detectadas": 1,
+    "alertas_soc": 1,
+    "timestamp": "2026-09-04T15:41:33.719742+00:00"
+}

@@ -1,0 +1,28 @@
+{
+    "projeto": "CyberSentinel-ML",
+    "aula": 31,
+    "fonte": "AbuseIPDB",
+    "timestamp": "2026-09-04T13:52:36.778697+00:00",
+    "consultas": [
+        {
+            "projeto": "CyberSentinel-ML",
+            "aula": 31,
+            "fonte": "AbuseIPDB",
+            "timestamp": "2026-09-04T13:52:36.776237+00:00",
+            "ip": "8.8.8.8",
+            "threat_intelligence": {
+                "abuse_confidence_score": 0,
+                "nivel_risco": "SEM_RISCO",
+                "total_reports": 198,
+                "last_reported_at": "2026-09-04T12:22:22+00:00",
+                "country_code": "US",
+                "country_name": null,
+                "isp": "Google LLC",
+                "domain": "google.com",
+                "usage_type": "Content Delivery Network",
+                "is_public": true,
+                "is_whitelisted": true
+            }
+        }
+    ]
+}

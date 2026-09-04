@@ -1,0 +1,23 @@
+[
+    {
+        "approval_id": "APR-44-20260904171927456792-58F91CCD",
+        "timestamp": "2026-09-04T17:19:27.456882+00:00",
+        "case_id": "CASE-42-20260904170021574785-BDE96CDA",
+        "ip_origem": "8.8.8.8",
+        "analista": "ANALISTA_SOC_SIMULADO",
+        "decisao": "APROVADO",
+        "justificativa": "Aprovacao simulada para validar o fluxo Human Approval Gate. Nenhuma acao operacional real sera executada.",
+        "status_anterior": "ESCALADO",
+        "status_resultante": "APROVADO_PARA_ACAO",
+        "fase_anterior": "ESCALACAO",
+        "fase_resultante": "AGUARDANDO_EXECUCAO_EXTERNA",
+        "prioridade_soc": "CRITICO",
+        "decision_score": 92.15,
+        "acao_recomendada": "ESCALAR_E_PREPARAR_CONTENCAO",
+        "requer_acao": true,
+        "acao_autorizada": true,
+        "execucao_real": false,
+        "bloqueio_automatico": false,
+        "modo_operacional": "SIMULACAO"
+    }
+]

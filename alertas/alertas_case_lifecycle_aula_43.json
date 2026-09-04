@@ -1,0 +1,16 @@
+[
+    {
+        "alerta_id": "LIFE-ALT-43-20260904170953574967-89922EF8",
+        "timestamp": "2026-09-04T17:09:53.575107+00:00",
+        "case_id": "CASE-42-20260904170021574785-BDE96CDA",
+        "ip_origem": "8.8.8.8",
+        "prioridade": "CRITICO",
+        "decision_score": 92.15,
+        "status_anterior": "ABERTO_PRIORITARIO",
+        "status_novo": "ESCALADO",
+        "fase_nova": "ESCALACAO",
+        "requer_aprovacao_humana": true,
+        "bloqueio_automatico": false,
+        "modo": "SIMULACAO"
+    }
+]

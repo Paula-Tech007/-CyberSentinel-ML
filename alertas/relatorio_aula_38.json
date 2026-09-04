@@ -1,0 +1,16 @@
+{
+    "projeto": "CyberSentinel-ML",
+    "aula": 38,
+    "versao": "CORRIGIDA",
+    "incidentes_analisados": 2,
+    "playbooks_gerados": 2,
+    "campanhas_integradas": 1,
+    "alertas_soc": 1,
+    "prioridades": {
+        "BAIXO": 0,
+        "MEDIO": 1,
+        "ALTO": 0,
+        "CRITICO": 1
+    },
+    "timestamp": "2026-09-04T15:47:59.761935+00:00"
+}

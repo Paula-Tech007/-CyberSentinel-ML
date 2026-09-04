@@ -1,0 +1,52 @@
+{
+    "projeto": "CyberSentinel-ML",
+    "aula": 34,
+    "timestamp": "2026-09-04T15:14:13.922095+00:00",
+    "alertas": [
+        {
+            "projeto": "CyberSentinel-ML",
+            "aula": 34,
+            "alerta_id": "RISK-ALT-20260904151413628547",
+            "id_evento": "RISK-34-001",
+            "ip_origem": "8.8.8.8",
+            "classificacao": "ATAQUE",
+            "categoria_ataque": "DoS",
+            "risk_score": 39.32,
+            "nivel_risco": "MEDIO",
+            "prioridade_soc": "MEDIO",
+            "risk_id": "RISK-20260904151413628513",
+            "alerta_soc": true,
+            "timestamp": "2026-09-04T15:14:13.628554+00:00"
+        },
+        {
+            "projeto": "CyberSentinel-ML",
+            "aula": 34,
+            "alerta_id": "RISK-ALT-20260904151413916979",
+            "id_evento": "RISK-34-002",
+            "ip_origem": "1.1.1.1",
+            "classificacao": "ATAQUE",
+            "categoria_ataque": "Shellcode",
+            "risk_score": 46.52,
+            "nivel_risco": "MEDIO",
+            "prioridade_soc": "MEDIO",
+            "risk_id": "RISK-20260904151413916945",
+            "alerta_soc": true,
+            "timestamp": "2026-09-04T15:14:13.916985+00:00"
+        },
+        {
+            "projeto": "CyberSentinel-ML",
+            "aula": 34,
+            "alerta_id": "RISK-ALT-20260904151413919503",
+            "id_evento": "RISK-34-003",
+            "ip_origem": "192.168.1.50",
+            "classificacao": "ATAQUE",
+            "categoria_ataque": "Exploits",
+            "risk_score": 95.4,
+            "nivel_risco": "CRITICO",
+            "prioridade_soc": "CRITICO",
+            "risk_id": "RISK-20260904151413919480",
+            "alerta_soc": true,
+            "timestamp": "2026-09-04T15:14:13.919508+00:00"
+        }
+    ]
+}

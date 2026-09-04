@@ -1,0 +1,84 @@
+{
+    "projeto": "CyberSentinel-ML",
+    "aula": 24,
+    "versao": "Ingestao de Eventos Externos JSON/JSONL",
+    "timestamp": "2026-09-04T12:14:58.348743+00:00",
+    "fonte": {
+        "arquivo": "eventos\\eventos_aula_24.json",
+        "formato": "JSON"
+    },
+    "pipeline": "JSON/JSONL -> VALIDACAO -> DETECTOR BINARIO -> CLASSIFICADOR MULTICLASSE -> SEVERIDADE -> ALERTA SOC",
+    "modelo_binario": {
+        "algoritmo": "DecisionTreeClassifier",
+        "threshold": 0.099
+    },
+    "modelo_multiclasse": {
+        "algoritmo": "DecisionTreeClassifier",
+        "categorias": [
+            "Analysis",
+            "Backdoor",
+            "DoS",
+            "Exploits",
+            "Fuzzers",
+            "Generic",
+            "Reconnaissance",
+            "Shellcode",
+            "Worms"
+        ]
+    },
+    "features": [
+        "spkts",
+        "dpkts",
+        "sbytes",
+        "dbytes",
+        "rate",
+        "sttl",
+        "dttl",
+        "sload",
+        "dload"
+    ],
+    "estatisticas": {
+        "eventos_recebidos": 4,
+        "eventos_validos": 3,
+        "eventos_rejeitados": 1,
+        "eventos_normais": 0,
+        "eventos_ataque": 3,
+        "erros_ml": 0,
+        "alertas_gerados": 3
+    },
+    "resultados": [
+        {
+            "id_evento": "EXT-24-001",
+            "timestamp": "2026-09-04T12:14:58.339045+00:00",
+            "classificacao": "ATAQUE",
+            "probabilidade_ataque": 0.099815,
+            "categoria": "DoS",
+            "confianca_categoria": 0.821908,
+            "severidade": "ALTO",
+            "alerta_soc": true,
+            "alerta_id": "ALT-24-0001"
+        },
+        {
+            "id_evento": "EXT-24-002",
+            "timestamp": "2026-09-04T12:14:58.341602+00:00",
+            "classificacao": "ATAQUE",
+            "probabilidade_ataque": 0.406258,
+            "categoria": "Shellcode",
+            "confianca_categoria": 0.889117,
+            "severidade": "CRITICO",
+            "alerta_soc": true,
+            "alerta_id": "ALT-24-0002"
+        },
+        {
+            "id_evento": "EXT-24-003",
+            "timestamp": "2026-09-04T12:14:58.343869+00:00",
+            "classificacao": "ATAQUE",
+            "probabilidade_ataque": 0.933634,
+            "categoria": "Exploits",
+            "confianca_categoria": 1.0,
+            "severidade": "CRITICO",
+            "alerta_soc": true,
+            "alerta_id": "ALT-24-0003"
+        }
+    ]
+}

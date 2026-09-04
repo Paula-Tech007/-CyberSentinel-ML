@@ -1,0 +1,76 @@
+[
+    {
+        "timeline_id": "TL-37-0001",
+        "ioc": "8.8.8.8",
+        "primeiro_evento": "2026-09-04T15:36:05.202435+00:00",
+        "ultimo_evento": "2026-09-04T15:36:05.231528+00:00",
+        "quantidade_eventos": 3,
+        "quantidade_categorias": 3,
+        "categorias": [
+            "DoS",
+            "Exploits",
+            "Shellcode"
+        ],
+        "score_inicial": 39.32,
+        "score_final": 88.01,
+        "score_maximo": 88.01,
+        "variacao_score": 48.69,
+        "tendencia": "FORTE_CRESCIMENTO",
+        "status": "INCIDENTE_CRITICO",
+        "eventos": [
+            {
+                "id_evento": "CORR-35-001",
+                "ioc": "8.8.8.8",
+                "categoria": "DoS",
+                "risk_score": 39.32,
+                "prioridade": "DESCONHECIDA",
+                "timestamp": "2026-09-04T15:36:05.202435+00:00"
+            },
+            {
+                "id_evento": "CORR-35-002",
+                "ioc": "8.8.8.8",
+                "categoria": "Shellcode",
+                "risk_score": 62.52,
+                "prioridade": "DESCONHECIDA",
+                "timestamp": "2026-09-04T15:36:05.219391+00:00"
+            },
+            {
+                "id_evento": "CORR-35-003",
+                "ioc": "8.8.8.8",
+                "categoria": "Exploits",
+                "risk_score": 88.01,
+                "prioridade": "DESCONHECIDA",
+                "timestamp": "2026-09-04T15:36:05.231528+00:00"
+            }
+        ],
+        "timestamp": "2026-09-04T15:41:33.702847+00:00"
+    },
+    {
+        "timeline_id": "TL-37-0002",
+        "ioc": "1.1.1.1",
+        "primeiro_evento": "2026-09-04T15:36:05.490990+00:00",
+        "ultimo_evento": "2026-09-04T15:36:05.490990+00:00",
+        "quantidade_eventos": 1,
+        "quantidade_categorias": 1,
+        "categorias": [
+            "Shellcode"
+        ],
+        "score_inicial": 46.52,
+        "score_final": 46.52,
+        "score_maximo": 46.52,
+        "variacao_score": 0.0,
+        "tendencia": "SEM_HISTORICO",
+        "status": "EVENTO_ISOLADO",
+        "eventos": [
+            {
+                "id_evento": "CORR-35-004",
+                "ioc": "1.1.1.1",
+                "categoria": "Shellcode",
+                "risk_score": 46.52,
+                "prioridade": "DESCONHECIDA",
+                "timestamp": "2026-09-04T15:36:05.490990+00:00"
+            }
+        ],
+        "timestamp": "2026-09-04T15:41:33.702860+00:00"
+    }
+]

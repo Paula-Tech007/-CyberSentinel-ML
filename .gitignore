@@ -168,3 +168,5 @@ authentication.json
 # ============================================================
 # END
 # ============================================================
+# Modelo grande - acima do limite do GitHub
+modelos/unsw_attack_multiclass.joblib

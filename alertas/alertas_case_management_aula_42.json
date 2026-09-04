@@ -1,0 +1,16 @@
+[
+    {
+        "alerta_id": "CASE-ALT-42-20260904170422144344-BB54A9B2",
+        "timestamp": "2026-09-04T17:04:22.144414+00:00",
+        "case_id": "CASE-42-20260904170422137489-DF7383AD",
+        "ip_origem": "8.8.8.8",
+        "prioridade": "CRITICO",
+        "decision_score": 92.15,
+        "status_caso": "ABERTO_PRIORITARIO",
+        "requer_analista": true,
+        "requer_escalacao": true,
+        "preparar_contencao": true,
+        "bloqueio_automatico": false,
+        "modo": "SIMULACAO"
+    }
+]

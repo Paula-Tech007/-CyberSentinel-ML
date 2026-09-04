@@ -1,0 +1,274 @@
+{
+    "projeto": "CyberSentinel-ML",
+    "aula": 45,
+    "versao": "2.0",
+    "timestamp": "2026-09-04T17:31:43.894382+00:00",
+    "pipeline": {
+        "componentes_esperados": 10,
+        "componentes_disponiveis": 10,
+        "cobertura_percentual": 100.0,
+        "registros_historicos": 35,
+        "iocs_historicos": 2,
+        "iocs_ativos": 2,
+        "lista_iocs_historicos": [
+            "1.1.1.1",
+            "8.8.8.8"
+        ],
+        "lista_iocs_ativos": [
+            "1.1.1.1",
+            "8.8.8.8"
+        ],
+        "valores_ioc_ignorados": [
+            "DESCONHECIDO"
+        ],
+        "componentes": {
+            "correlacao_ioc_eventos": {
+                "nome": "IOC Historical Correlation",
+                "disponivel": true,
+                "registros": 4
+            },
+            "campanhas_ioc": {
+                "nome": "Campaign Detection",
+                "disponivel": true,
+                "registros": 2
+            },
+            "incident_timelines": {
+                "nome": "Incident Timeline",
+                "disponivel": true,
+                "registros": 2
+            },
+            "incident_response_playbooks": {
+                "nome": "Incident Response",
+                "disponivel": true,
+                "registros": 4
+            },
+            "mitre_attack_mapping": {
+                "nome": "MITRE ATT&CK Context",
+                "disponivel": true,
+                "registros": 8
+            },
+            "incident_evidence": {
+                "nome": "Incident Evidence",
+                "disponivel": true,
+                "registros": 4
+            },
+            "soc_incident_decisions": {
+                "nome": "SOC Decision Engine",
+                "disponivel": true,
+                "registros": 4
+            },
+            "soc_incident_cases": {
+                "nome": "SOC Case Management",
+                "disponivel": true,
+                "registros": 4
+            },
+            "soc_case_transitions": {
+                "nome": "SOC Case Lifecycle",
+                "disponivel": true,
+                "registros": 2
+            },
+            "soc_human_approvals": {
+                "nome": "Human Approval Gate",
+                "disponivel": true,
+                "registros": 1
+            }
+        }
+    },
+    "evidence": {
+        "historicos": 4,
+        "atuais": 2,
+        "iocs": [
+            "1.1.1.1",
+            "8.8.8.8"
+        ],
+        "score_medio": 55.0,
+        "score_minimo": 18.0,
+        "score_maximo": 92.0,
+        "niveis": {
+            "BAIXO": 1,
+            "CRITICO": 1
+        },
+        "confiancas": {
+            "ALTA": 2
+        },
+        "registros_atuais": [
+            {
+                "ioc": "8.8.8.8",
+                "evidence_id": "EVD-40-20260904161034606156-FF22D18F",
+                "evidence_score": 92.0,
+                "nivel": "CRITICO",
+                "confianca": "ALTA"
+            },
+            {
+                "ioc": "1.1.1.1",
+                "evidence_id": "EVD-40-20260904161034597187-2B484D57",
+                "evidence_score": 18.0,
+                "nivel": "BAIXO",
+                "confianca": "ALTA"
+            }
+        ]
+    },
+    "decisoes": {
+        "historicos": 4,
+        "atuais": 2,
+        "iocs": [
+            "1.1.1.1",
+            "8.8.8.8"
+        ],
+        "score_medio": 58.83,
+        "score_minimo": 25.5,
+        "score_maximo": 92.15,
+        "prioridades": {
+            "BAIXO": 1,
+            "CRITICO": 1
+        },
+        "classificacoes": {
+            "MONITORAMENTO": 1,
+            "INCIDENTE_PRIORITARIO": 1
+        },
+        "sla": {
+            "ATE_8_HORAS": 1,
+            "IMEDIATO": 1
+        },
+        "requer_analista": 1,
+        "requer_escalacao": 1,
+        "requer_contencao": 1,
+        "auto_block": 0,
+        "registros_atuais": [
+            {
+                "ioc": "8.8.8.8",
+                "decision_id": "DEC-41-20260904165407071371-FEDE8124",
+                "decision_score": 92.15,
+                "prioridade": "CRITICO",
+                "classificacao": "INCIDENTE_PRIORITARIO",
+                "sla": "IMEDIATO"
+            },
+            {
+                "ioc": "1.1.1.1",
+                "decision_id": "DEC-41-20260904165407039360-61AF8794",
+                "decision_score": 25.5,
+                "prioridade": "BAIXO",
+                "classificacao": "MONITORAMENTO",
+                "sla": "ATE_8_HORAS"
+            }
+        ]
+    },
+    "casos": {
+        "historicos": 4,
+        "atuais": 2,
+        "iocs": [
+            "1.1.1.1",
+            "8.8.8.8"
+        ],
+        "criticos": 1,
+        "prioridades": {
+            "CRITICO": 1,
+            "BAIXO": 1
+        },
+        "status": {
+            "APROVADO_PARA_ACAO": 1,
+            "MONITORAMENTO": 1
+        },
+        "fases": {
+            "AGUARDANDO_EXECUCAO_EXTERNA": 1,
+            "MONITORAMENTO": 1
+        },
+        "owners": {
+            "SOC_ANALYST_ESCALATION": 1,
+            "SOC_MONITORING_QUEUE": 1
+        },
+        "sla": {
+            "IMEDIATO": 1,
+            "ATE_8_HORAS": 1
+        },
+        "decision_score_medio": 58.83,
+        "evidence_score_medio": 61.0,
+        "fila": [
+            {
+                "case_id": "CASE-42-20260904170021574785-BDE96CDA",
+                "ioc": "8.8.8.8",
+                "prioridade": "CRITICO",
+                "decision_score": 92.15,
+                "evidence_score": 92.0,
+                "status": "APROVADO_PARA_ACAO",
+                "fase": "AGUARDANDO_EXECUCAO_EXTERNA",
+                "owner": "SOC_ANALYST_ESCALATION",
+                "sla": "IMEDIATO"
+            },
+            {
+                "case_id": "CASE-42-20260904170021585316-FC79FAC1",
+                "ioc": "1.1.1.1",
+                "prioridade": "BAIXO",
+                "decision_score": 25.5,
+                "evidence_score": 30.0,
+                "status": "MONITORAMENTO",
+                "fase": "MONITORAMENTO",
+                "owner": "SOC_MONITORING_QUEUE",
+                "sla": "ATE_8_HORAS"
+            }
+        ]
+    },
+    "campanhas": {
+        "registros": 2,
+        "detectadas": 1,
+        "niveis": {
+            "CRITICO": 1,
+            "BAIXO": 1
+        }
+    },
+    "timelines": {
+        "registros": 2,
+        "criticas": 1,
+        "status": {
+            "INCIDENTE_CRITICO": 1,
+            "EVENTO_ISOLADO": 1
+        },
+        "tendencias": {
+            "FORTE_CRESCIMENTO": 1,
+            "SEM_HISTORICO": 1
+        }
+    },
+    "lifecycle": {
+        "transicoes": 2,
+        "permitidas": 2,
+        "bloqueadas": 0,
+        "requerem_aprovacao_humana": 1,
+        "bloqueios_automaticos": 0,
+        "status_origem": {
+            "ABERTO_PRIORITARIO": 1,
+            "MONITORAMENTO": 1
+        },
+        "status_destino": {
+            "ESCALADO": 1,
+            "MONITORAMENTO": 1
+        }
+    },
+    "aprovacoes": {
+        "registros": 1,
+        "decisoes": {
+            "APROVADO": 1
+        },
+        "acoes_autorizadas": 1,
+        "execucoes_reais": 0,
+        "bloqueios_automaticos": 0,
+        "modos": {
+            "SIMULACAO": 1
+        }
+    },
+    "consistencia": {
+        "evidence_decision": true,
+        "decision_cases": true,
+        "evidence_cases": true
+    },
+    "seguranca": {
+        "execucoes_reais": 0,
+        "bloqueios_automaticos": 0,
+        "modo_operacional": "SIMULACAO",
+        "ok": true
+    },
+    "saude": {
+        "validacoes": 27,
+        "aprovadas": 27,
+        "percentual": 100.0
+    }
+}

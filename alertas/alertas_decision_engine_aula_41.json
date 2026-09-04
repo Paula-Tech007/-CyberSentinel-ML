@@ -1,0 +1,14 @@
+[
+    {
+        "alerta_id": "DEC-ALT-41-20260904165407083629-81C78910",
+        "timestamp": "2026-09-04T16:54:07.083725+00:00",
+        "decision_id": "DEC-41-20260904165407071371-FEDE8124",
+        "evidence_id": "EVD-40-20260904161034606156-FF22D18F",
+        "ip_origem": "8.8.8.8",
+        "decision_score": 92.15,
+        "prioridade": "CRITICO",
+        "classificacao": "INCIDENTE_PRIORITARIO",
+        "acao_recomendada": "ESCALAR_E_PREPARAR_CONTENCAO",
+        "modo": "SIMULACAO"
+    }
+]
